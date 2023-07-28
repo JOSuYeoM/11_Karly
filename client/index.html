@@ -1,0 +1,818 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+      type="image/xml+svg"
+    />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard-dynamic-subset.css"
+    />
+    <link rel="stylesheet" href="/style/index.css" />
+    <script src="./js/main.js" type="module"></script>
+    <title>project</title>
+  </head>
+
+  <body>
+    <!-- 공통 헤더 -->
+    <header class="header">
+      <div class="header__group clearfix">
+        <div class="header__group__tab">
+          <h1 class="group__logo">
+            <img
+              class="group__logo_img"
+              src="./assets/icons/Logo.svg"
+              alt="마켓칼리 로고"
+            />
+          </h1>
+          <ul class="group__itemBox">
+            <li class="group__itemBox__item">
+              <a class="itemBox__link itemBox__link--active" href="#"
+                >마켓칼리</a
+              >
+            </li>
+            <li class="group__itemBox__item">
+              <span class="itemBox__item__divider" aria-hidden="true">ㅣ</span
+              ><a class="itemBox__link" href="#">뷰티칼리</a>
+              <!-- 고객센터 옆 화살표는 li background로 처리 -->
+            </li>
+          </ul>
+        </div>
+        <form action="/" method="POST" class="header__group__searchForm">
+          <fieldset class="group__searchForm__fieldset">
+            <legend class="a11yHidden">검색 폼</legend>
+            <div class="searchForm__group">
+              <div class="searchForm__group__formInputBox">
+                <label for="search" class="a11yHidden">검색어</label>
+                <input
+                  type="search"
+                  id="search"
+                  name="search"
+                  required
+                  class="group__input"
+                  placeholder="검색어를 입력하세요."
+                />
+              </div>
+              <button type="submit" class="searchForm__group__button"></button>
+            </div>
+          </fieldset>
+        </form>
+        <ul class="header__group__myPage">
+          <li class="group__myPageLi">
+            <button
+              class="group__myPageLi__button"
+              type="button"
+              aria-label="배송지 등록"
+            ></button>
+          </li>
+
+          <li class="group__myPageLi">
+            <button
+              class="group__myPageLi__button"
+              type="button"
+              aria-label="찜하기"
+            ></button>
+          </li>
+          <li class="group__myPageLi">
+            <button
+              class="group__myPageLi__button"
+              type="button"
+              aria-label="장바구니"
+            ></button>
+          </li>
+        </ul>
+        <ul class="header__group__memberOnly">
+          <li class="group__memberOnlyLi">
+            <a
+              class="group__memberOnlyLi__link group__memberOnlyLi--active"
+              href="#"
+              >회원가입</a
+            >
+          </li>
+          <li class="group__memberOnlyLi">
+            <span class="group__memberOnlyLi__divider" aria-hidden="true"
+              >ㅣ</span
+            >
+            <a href="/login.html" class="group__memberOnlyLi__link">로그인</a>
+          </li>
+          <li class="group__memberOnlyLi">
+            <span class="group__memberOnlyLi__divider" aria-hidden="true"
+              >ㅣ</span
+            ><a href="#" class="group__memberOnlyLi__link">고객센터</a>
+            <!-- 고객센터 옆 화살표는 li background로 처리 -->
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- 공통 내비게이션 -->
+    <nav class="nav">
+      <h2 class="a11yHidden">주요 메뉴</h2>
+      <div class="nav__container">
+        <div class="nav__category" aria-label="카테고리">
+          <img
+            class="nav__category__image"
+            src="./assets/icons/Hamburger.svg"
+            alt="햄버거 버튼"
+          />
+          <span class="nav__category__text">카테고리</span>
+          <ul class="nav__category__list">
+            <li class="category__item sprite sprite1">
+              <a href="#" class="category__link">선물하기</a>
+            </li>
+            <li class="category__item sprite sprite2">
+              <a href="#" class="category__link">채소</a>
+            </li>
+            <li class="category__item sprite sprite3">
+              <a href="#" class="category__link">과일 · 견과 · 쌀</a>
+            </li>
+            <li class="category__item sprite sprite4">
+              <a href="#" class="category__link">수산 · 해산 · 건어물</a>
+            </li>
+            <li class="category__item sprite sprite5">
+              <a href="#" class="category__link">정육 · 계란</a>
+            </li>
+            <li class="category__item sprite sprite6">
+              <a href="#" class="category__link">국 · 반찬 · 메인요리</a>
+            </li>
+            <li class="category__item sprite sprite7">
+              <a href="#" class="category__link">샐러드 · 간편식</a>
+            </li>
+            <li class="category__item sprite sprite8">
+              <a href="#" class="category__link">면 · 양념 · 오일</a>
+            </li>
+            <li class="category__item sprite sprite9">
+              <a href="#" class="category__link">생수 · 음료 · 우유 · 커피</a>
+            </li>
+            <li class="category__item sprite sprite10">
+              <a href="#" class="category__link">간식 · 과자 · 떡</a>
+            </li>
+            <li class="category__item sprite sprite11">
+              <a href="#" class="category__link">베이커리 · 치즈 · 델리</a>
+            </li>
+            <li class="category__item sprite sprite12">
+              <a href="#" class="category__link">건강식품</a>
+            </li>
+            <li class="category__item sprite sprite13">
+              <a href="#" class="category__link">와인</a>
+            </li>
+            <li class="category__item sprite sprite14">
+              <a href="#" class="category__link">전통주</a>
+            </li>
+            <li class="category__item sprite sprite15">
+              <a href="#" class="category__link">생활용품 · 리빙 · 캠핑</a>
+            </li>
+            <li class="category__item sprite sprite16">
+              <a href="#" class="category__link">스킨케어 · 메이크업</a>
+            </li>
+            <li class="category__item sprite sprite17">
+              <a href="#" class="category__link">헤어 · 바디 · 구강</a>
+            </li>
+            <li class="category__item sprite sprite18">
+              <a href="#" class="category__link">주방용품</a>
+            </li>
+            <li class="category__item sprite sprite19">
+              <a href="#" class="category__link">가전제품</a>
+            </li>
+            <li class="category__item sprite sprite20">
+              <a href="#" class="category__link">반려동물</a>
+            </li>
+            <li class="category__item sprite sprite21">
+              <a href="#" class="category__link">베이비 · 키즈 · 완구</a>
+            </li>
+            <li class="category__item sprite sprite22">
+              <a href="#" class="category__link">여행 · 티켓</a>
+            </li>
+          </ul>
+        </div>
+        <ul class="nav__collection__list">
+          <li class="collection__item">
+            <a href="#" class="collection__link">신상품</a>
+          </li>
+          <li class="collection__item">
+            <a href="#" class="collection__link">베스트</a>
+          </li>
+          <li class="collection__item">
+            <a href="#" class="collection__link">알뜰쇼핑</a>
+          </li>
+          <li class="collection__item">
+            <a href="#" class="collection__link">특가/혜택</a>
+          </li>
+        </ul>
+        <div class="nav__info">
+          <a href="#" class="nav__info__link"
+            ><span class="primary">샛별·택배</span> 배송안내</a
+          >
+        </div>
+      </div>
+    </nav>
+    <main>
+      <!-- 메인 이벤트 섹션 -->
+      <section class="event">
+        <h2 class="a11yHidden">메인 이벤트</h2>
+
+        <img
+            src="./assets/image/banner04.svg"
+            alt="컬리 이 주의 특가 한 눈에 보기" class="event__image"
+        />
+
+        <button
+          type="button"
+          class="button__left"
+          aria-label="왼쪽 이벤트 페이지로 이동"
+        >
+          <img src="./assets/icons/Arrow.svg" alt="왼쪽 이동 화살표" />
+        </button>
+        <button
+          type="button"
+          class="button__right"
+          aria-label="오른쪽 이벤트 페이지로 이동"
+        >
+          <img src="./assets/icons/Arrow.svg" alt="오른쪽 이동 화살표" />
+        </button>
+        
+      </section>
+      <!-- 상품1 섹션 -->
+      <section class="goodsUp">
+        <!-- 상품1 제목 -->
+
+        <h2 class="goods__title">이 상품 어때요?</h2>
+
+        <!-- 상품1 목록 -->
+        <div class="goods__group">
+          <!-- 첫번째 요소 -->
+          <div class="goods__list">
+            <a
+              href="#"
+              class="goods__link"
+              title="[풀무원] 탱탱쫄면 (4개입) 상세페이지"
+            >
+              <dl class="goods__item goods__regular">
+                <dt class="a11yHidden">상품명</dt>
+                <dd class="goods__name">
+                  <span aria-hidden="true">[</span>풀무원<span
+                    aria-hidden="true"
+                    >]</span
+                  >
+                  탱탱쫄면 (4개입)
+                </dd>
+                <dd class="goods__thumbnail">
+                  <img
+                    src="./assets/image/goods1.svg"
+                    alt="."
+                    aria-hidden="true"
+                  />
+                </dd>
+                <dt class="a11yHidden">정상가</dt>
+                <dd class="goods__regPrice"><ins>4,980 원</ins></dd>
+              </dl>
+            </a>
+            <button
+              type="button"
+              class="button__cart"
+              aria-label="장바구니로 이동"
+            ></button>
+          </div>
+
+          <!-- 두번째 요소 -->
+          <div class="goods__list">
+            <a
+              href="#"
+              class="goods__link"
+              title="[온더바디] 죠르디 시카 자석 선쿠션 상세페이지"
+            >
+              <dl class="goods__item goods__regular">
+                <dt class="a11yHidden">상품명</dt>
+                <dd class="goods__name">
+                  <span aria-hidden="true">[</span>온더바디<span
+                    aria-hidden="true"
+                    >]</span
+                  >
+                  죠르디 시카 자석 선쿠션
+                </dd>
+                <dd class="goods__thumbnail">
+                  <img
+                    src="./assets/image/goods2.svg"
+                    alt="."
+                    aria-hidden="true"
+                  />
+                </dd>
+                <dt class="a11yHidden">정상가</dt>
+                <dd class="goods__regPrice"><ins>32,500 원</ins></dd>
+              </dl>
+            </a>
+            <button
+              type="button"
+              class="button__cart"
+              aria-label="장바구니로 이동"
+            ></button>
+          </div>
+          <!-- 세번째 요소 -->
+          <div class="goods__list">
+            <a
+              href="#"
+              class="goods__link"
+              title="유기농 밀키퀸 현미 4kg 상세페이지"
+            >
+              <dl class="goods__item goods__regular">
+                <dt class="a11yHidden">상품명</dt>
+                <dd class="goods__name">유기농 밀키퀸 현미 4kg</dd>
+                <dd class="goods__thumbnail">
+                  <img
+                    src="./assets/image/goods3.svg"
+                    alt="."
+                    aria-hidden="true"
+                  />
+                </dd>
+                <dt class="a11yHidden">정상가</dt>
+                <dd class="goods__regPrice"><ins>25,000 원</ins></dd>
+              </dl>
+            </a>
+            <button
+              type="button"
+              class="button__cart"
+              aria-label="장바구니로 이동"
+            ></button>
+          </div>
+          <!-- 네번째 요소 -->
+          <div class="goods__list">
+            <a
+              href="#"
+              class="goods__link"
+              title="[프로쉬] 베이비 세탁세 상세페이지"
+            >
+              <dl class="goods__item goods__discount">
+                <dt class="a11yHidden">상품명</dt>
+                <dd class="goods__name">
+                  <span aria-hidden="true">[</span>프로쉬<span
+                    aria-hidden="true"
+                    >]</span
+                  >
+                  베이비 세탁세
+                </dd>
+                <dd class="goods__thumbnail">
+                  <img
+                    src="./assets/image/goods4.svg"
+                    alt="."
+                    aria-hidden="true"
+                  />
+                </dd>
+                <dt class="a11yHidden">정상가</dt>
+                <dd class="goods__regPrice"><del>24,000 원</del></dd>
+                <dt class="a11yHidden">할인가</dt>
+                <dd class="goods__disPrice">
+                  <b class="goods__disRate">24%</b>
+                  <ins>18,900 원</ins>
+                </dd>
+              </dl>
+            </a>
+
+            <button
+              type="button"
+              class="button__cart"
+              aria-label="장바구니로 이동"
+            ></button>
+          </div>
+        </div>
+        <!-- 슬라이드 버튼 -->
+        <button
+          type="button"
+          class="button__next"
+          aria-label="다음 상품 보여주기"
+        ></button>
+      </section>
+      <!-- 배너 -->
+      <section class="banner">
+        <h2 class="a11yHidden">10월 주간 이벤트</h2>
+        <a href="#"
+          ><img
+            src="./assets/image/banner03.svg"
+            alt="컬리 퍼플위크 안내 적립률up+3종 쿠폰팩, 더 풍성해진 혜택 10월24일 부터 10월28일 까지" class="banner__image"
+        /></a>
+      </section>
+      <!-- 상품2 섹션 -->
+      <section class="goodsDown">
+        <!-- 상품2 제목 -->
+        <h2 class="goods__title">놓치면 후회할 가격</h2>
+        <!-- 상품2 목록 -->
+        <div class="goods__Group">
+          <!-- 첫번째 요소 -->
+          <div class="goods__list">
+            <a
+              href="#"
+              class="goods__link"
+              title="[풀무원] 탱탱쫄면 (4개입) 상세페이지"
+            >
+              <dl class="goods__item goods__regular">
+                <dt class="a11yHidden">상품명</dt>
+                <dd class="goods__name">
+                  <span aria-hidden="true">[</span>풀무원<span
+                    aria-hidden="true"
+                    >]</span
+                  >
+                  탱탱쫄면 (4개입)
+                </dd>
+                <dd class="goods__thumbnail">
+                  <img
+                    src="./assets/image/goods1.svg"
+                    alt="."
+                    aria-hidden="true"
+                  />
+                </dd>
+                <dt class="a11yHidden">정상가</dt>
+                <dd class="goods__regPrice"><ins>4,980 원</ins></dd>
+              </dl>
+            </a>
+            <button
+              type="button"
+              class="button__cart"
+              aria-label="장바구니로 이동"
+            ></button>
+          </div>
+          <!-- 두번째 요소 -->
+          <div class="goods__list">
+            <a
+              href="#"
+              class="goods__link"
+              title="[온더바디] 죠르디 시카 자석 선쿠션 상세페이지"
+            >
+              <dl class="goods__item goods__regular">
+                <dt class="a11yHidden">상품명</dt>
+                <dd class="goods__name">
+                  <span aria-hidden="true">[</span>온더바디<span
+                    aria-hidden="true"
+                    >]</span
+                  >
+                  죠르디 시카 자석 선쿠션
+                </dd>
+                <dd class="goods__thumbnail">
+                  <img
+                    src="./assets/image/goods2.svg"
+                    alt="."
+                    aria-hidden="true"
+                  />
+                </dd>
+                <dt class="a11yHidden">정상가</dt>
+                <dd class="goods__regPrice"><ins>32,500 원</ins></dd>
+              </dl>
+            </a>
+            <button
+              type="button"
+              class="button__cart"
+              aria-label="장바구니로 이동"
+            ></button>
+          </div>
+          <!-- 세번째 요소 -->
+          <div class="goods__list">
+            <a
+              href="#"
+              class="goods__link"
+              title="유기농 밀키퀸 현미 4kg 상세페이지"
+            >
+              <dl class="goods__item goods__regular">
+                <dt class="a11yHidden">상품명</dt>
+                <dd class="goods__name">유기농 밀키퀸 현미 4kg</dd>
+                <dd class="goods__thumbnail">
+                  <img
+                    src="./assets/image/goods3.svg"
+                    alt="."
+                    aria-hidden="true"
+                  />
+                </dd>
+                <dt class="a11yHidden">정상가</dt>
+                <dd class="goods__regPrice"><ins>25,000 원</ins></dd>
+              </dl>
+            </a>
+            <button
+              type="button"
+              class="button__cart"
+              aria-label="장바구니로 이동"
+            ></button>
+          </div>
+          <!-- 네번째 요소 -->
+          <div class="goods__list">
+            <a
+              href="#"
+              class="goods__link"
+              title="[프로쉬] 베이비 세탁세 상세페이지"
+            >
+              <dl class="goods__item goods__discount">
+                <dt class="a11yHidden">상품명</dt>
+                <dd class="goods__name">
+                  <span aria-hidden="true">[</span>프로쉬<span
+                    aria-hidden="true"
+                    >]</span
+                  >
+                  베이비 세탁세
+                </dd>
+                <dd class="goods__thumbnail">
+                  <img
+                    src="./assets/image/goods4.svg"
+                    alt="."
+                    aria-hidden="true"
+                  />
+                </dd>
+                <dt class="a11yHidden">정상가</dt>
+                <dd class="goods__regPrice"><del>24,000 원</del></dd>
+                <dt class="a11yHidden">할인가</dt>
+                <dd class="goods__disPrice">
+                  <b class="goods__disRate">24%</b>
+                  <ins>18,900 원</ins>
+                </dd>
+              </dl>
+            </a>
+            <button
+              type="button"
+              class="button__cart"
+              aria-label="장바구니로 이동"
+            ></button>
+          </div>
+        </div>
+        <!-- 슬라이드 버튼 -->
+        <button
+          type="button"
+          class="button__next"
+          aria-label="다음 상품 보여주기"
+        ></button>
+      </section>
+      <!-- 사이드바 -->
+      <aside class="side" role="complementary">
+        <h2 class="a11yHidden">최근 본 상품</h2>
+        <div class="side__container">
+          <button
+            type="button"
+            class="button__top"
+          >
+            <img src="./assets/icons/Direction=Up.svg" alt="위쪽 이동 화살표" />
+          </button>
+          <span class="sidebar__title"> 최근 본 상품 </span>
+          <ul>
+            <li>
+              <a href="#">
+                <img
+                  src="./assets/image/goods1.svg"
+                  alt="풀무원 탱탱쫄면(4개입)"
+                  class="li_image"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="./assets/image/goods4.svg"
+                  alt="프로쉬 베이비 세탁세제"
+                  class="li_image"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="./assets/image/goods2.svg"
+                  alt="온더바디 죠르디 시카 자석 선쿠션"
+                  class="li_image"
+                />
+              </a>
+            </li>
+          </ul>
+          <button
+            type="button"
+            class="button__bottom"
+          >
+            <img src="./assets/icons/Direction=Down.svg" alt="아래쪽 이동 화살표" />
+          </button>
+        </div>
+      </aside>
+    </main>
+    <!-- 공통 푸터 -->
+    <footer class="footer">
+      <div class="footer__contents">
+        <div class="footer__cs" role="complementary">
+          <h2 class="footer__cs__title">고객행복센터</h2>
+          <div class="footer__cs__info">
+            <span class="cs__infoNumber">1644-1107</span
+            ><span class="cs__infoTime">월~토요일 오전 7시 - 오후 6시</span>
+          </div>
+          <div class="footer__cs__inquiry">
+            <div class="cs__inquiryKaKao">
+              <button class="cs__inquiry__button" type="button">
+                카카오톡 문의
+              </button>
+              <div class="cs__inquiry__description">
+                <span> 월~토요일 | 오전 7시 - 오후 6시 </span>
+                <span>일/공휴일 | 오전 7시 - 오후 1시</span>
+              </div>
+            </div>
+            <div class="cs__inquiry1to1">
+              <button class="cs__inquiry__button" type="button">
+                1:1 문의
+              </button>
+              <div class="cs__inquiry__description">
+                <span>365일</span>
+                <span>고객센터 운영시간에 순차적으로 답변드리겠습니다.</span>
+              </div>
+            </div>
+            <div class="cs__inquiryBulk">
+              <button class="cs__inquiry__button" type="button">
+                대량주문 문의
+              </button>
+              <div class="cs__inquiry__description">
+                <span>월~금요일 | 오전9시 - 오후 6시</span>
+                <span>점심시간 | 낮 12시 - 오후 1시</span>
+              </div>
+            </div>
+          </div>
+          <div class="footer__cs__nonMember">
+            <span>
+              비회원 문의:
+              <a href="mailto:help@karlycorp.com" class="primary"
+                >help@karlycorp.com</a
+              >
+            </span>
+            <span>
+              비회원 대량주문 문의:
+              <a href="mailto:help@karlycorp.com" class="primary"
+                >help@karlycorp.com</a
+              >
+            </span>
+          </div>
+        </div>
+        <div class="footer__about" role="complementary">
+          <ul class="footer__about__list">
+            <li class="about__item">
+              <a href="#" class="about__link">칼리소개</a>
+            </li>
+            <li class="about__item">
+              <a href="#" class="about__link">칼리소개영상</a>
+            </li>
+            <li class="about__item">
+              <a href="#" class="about__link">인재채용</a>
+            </li>
+            <li class="about__item">
+              <a href="#" class="about__link">이용약관</a>
+            </li>
+            <li class="about__item">
+              <a href="#" class="about__link">개인정보처리방침</a>
+            </li>
+            <li class="about__item">
+              <a href="#" class="about__link">이용안내</a>
+            </li>
+          </ul>
+          <address class="footer__companyInfo">
+            <p class="footer__companyInfo__description">
+              <span>법인명 (상호) : 주식회사 컬리</span>
+              <span>|</span>
+              <span>사업자등록번호 : 261-81-23567</span>
+              <span>|</span>
+              <span
+                ><a
+                  href="#"
+                  class="primary"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >사업자정보 확인</a
+                ></span
+              >
+            </p>
+            <p class="footer__companyInfo__description">
+              <span>통신판매업 : 제 2018-서울강남-01646 호</span>
+              <span>|</span>
+              <span>개인정보보호책임자 : 이원준</span>
+            </p>
+            <p class="footer__companyInfo__description">
+              <span>주소 : 서울특별시 강남구 테헤란로 133, 18층(역삼동)</span>
+              <span>|</span>
+              <span>대표이사 : 김슬아</span>
+            </p>
+            <p class="footer__companyInfo__description">
+              <span>입점문의 : 입점문의하기</span>
+              <span>|</span>
+              <span
+                >제휴문의 :
+                <a href="mailto:business@karlycorp.com" class="primary"
+                  >business@karlycorp.com</a
+                ></span
+              >
+            </p>
+            <p class="footer__companyInfo__description">
+              <span
+                >채용문의 :
+                <a href="mailto:recruit@karlycorp.com" class="primary"
+                  >recruit@karlycorp.com</a
+                ></span
+              >
+            </p>
+            <p class="footer__companyInfo__description">
+              <span>팩스 : 070 - 7500 - 6098</span>
+            </p>
+          </address>
+          <div class="footer__sns">
+            <ul class="footer__snsList">
+              <li class="footer__snsLink" id="blogLink">
+                <a href="#" target="_blank" rel="noreferrer noopener"></a>
+              </li>
+              <li class="footer__snsLink" id="facebookLink">
+                <a href="#" target="_blank" rel="noreferrer noopener"></a>
+              </li>
+              <li class="footer__snsLink" id="instagramLink">
+                <a href="#" target="_blank" rel="noreferrer noopener"></a>
+              </li>
+              <li class="footer__snsLink" id="snsLink">
+                <a href="#" target="_blank" rel="noreferrer noopener"></a>
+              </li>
+              <li class="footer__snsLink" id="youtubeLink">
+                <a href="#" target="_blank" rel="noreferrer noopener"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__mark" role="complementary">
+          <button type="button" class="footer__mark__button">
+            <img
+              class="mark__image"
+              src="./assets/icons/footer1.svg"
+              alt="정보보호 관리체계 인증마크"
+            />
+            <div class="mark__descriptionWrapper">
+              <span class="mark__description">
+                [인증범위] 마켓칼리 쇼핑몰 서비스 개발 운영(심사받지 않은 물리적
+                인프라 제외)
+              </span>
+              <span class="mark__description">
+                [유효기간] 2022.01.19 ~ 2025.01.18
+              </span>
+            </div>
+          </button>
+          <button type="button" class="footer__mark__button">
+            <img
+              class="mark__image"
+              src="./assets/icons/footer2.svg"
+              alt="개인정보처리시스템 인증마크"
+            />
+            <div class="mark__descriptionWrapper">
+              <span class="mark__description">개인정보보호 우수 웹사이트</span>
+              <span class="mark__description">
+                개인정보처리시스템 인증 (ePRIVACY PLUS)
+              </span>
+            </div>
+          </button>
+          <button type="button" class="footer__mark__button">
+            <img
+              class="mark__image"
+              src="./assets/icons/footer3.svg"
+              alt="토스페이먼츠 구매안전 인증서"
+            />
+            <div class="mark__descriptionWrapper">
+              <span class="mark__description">
+                토스페이먼츠 구매안전(에스크로) 서비스를 이용하실 수 있습니다.
+              </span>
+            </div>
+          </button>
+          <button type="button" class="footer__mark__button">
+            <img
+              class="mark__image"
+              src="./assets/icons/footer4.svg"
+              alt="우리은행 안전거래 인증서"
+            />
+            <div class="mark__descriptionWrapper">
+              <span class="mark__description">
+                <span
+                  >고객님이 현금으로 결제한 금액에 대해 우리은행과 채무지급보증
+                  계약을 체결하여 안전거래를 보장하고 있습니다.</span
+                >
+              </span>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="footer__copyright" role="complementary">
+        <span class="footer__copyright__info">
+          마켓칼리에서 판매되는 상품 중에는 마켓칼리에 입점한 개별 판매자가
+          판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.
+        </span>
+        <span class="footer__copyright__info"
+          >마켓플레이스(오픈마켓) 상품의 경우 칼리는 통신판매중개자로서
+          통신판매의 당사자가 아닙니다. 칼리는 해당 상품의 주문, 품질, 교환/환불
+          등 의무와 책임을 부담하지 않습니다.</span
+        >
+        <em class="footer__copyright__notice">
+          &copy; KARLY CORP. ALL RIGHTS RESERVED
+        </em>
+      </div>
+    </footer>
+    <div class="mention">
+      <div class="mention__box">
+        <span class="mention__box__text"
+          >지금 가입하고 인기상품 100원에 받아가세요!</span
+        >
+        <button class="mention__box__button"></button>
+      </div>
+    </div>
+  </body>
+</html>
