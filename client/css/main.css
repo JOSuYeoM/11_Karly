@@ -610,8 +610,24 @@ video {
   top: 100%;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
 .z-\[5\] {
   z-index: 5;
+}
+
+.float-right {
+  float: right;
+}
+
+.m-2 {
+  margin: 0.5rem;
+}
+
+.z-10 {
+  z-index: 10;
 }
 
 .float-right {
@@ -666,6 +682,10 @@ video {
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .flex {
@@ -1029,11 +1049,6 @@ video {
 .text-accent-yellow {
   --tw-text-opacity: 1;
   color: rgb(250 98 47 / var(--tw-text-opacity));
-}
-
-.text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .text-content {
