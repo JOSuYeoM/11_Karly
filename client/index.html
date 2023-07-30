@@ -17,7 +17,7 @@
     />
     <link rel="stylesheet" href="./css/main.css" />
     <script src="./js/main.js" type="module"></script>
-    <title>project</title>
+    <title>main page</title>
   </head>
 
   <body class="font-pretendard">
@@ -118,7 +118,7 @@
         class="nav__container relative mx-auto flex w-xl flex-row items-center justify-between"
       >
         <div
-          class="nav__category hover flex w-60 flex-row hover:bg-gray-500"
+          class="nav__category hover flex flex-row hover:bg-gray-200 group duration-300"
           aria-label="카테고리"
         >
           <img
@@ -126,9 +126,12 @@
             src="./assets/icons/Hamburger.svg"
             alt="햄버거 버튼"
           />
-          <span class="nav__category__text ml-3 cursor-pointer">카테고리</span>
+          <span
+            class="nav__category__text ml-3 mr-3 py-3 cursor-pointer font-semibold"
+            >카테고리</span
+          >
           <ul
-            class="nav__category__list absolute top-full w-60 border border-solid border-gray-300 bg-white"
+            class="nav__category__list absolute top-full w-60 border border-solid border-gray-300 bg-white group-hover:visible invisible duration-300 opacity-0 group-hover:opacity-100"
           >
             <li
               class="category__item sprite sprite1 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
@@ -383,18 +386,26 @@
           </ul>
         </div>
         <ul
-          class="nav__collection__list flex w-1/2 flex-row justify-between py-2 text-base"
+          class="nav__collection__list flex w-1/2 flex-row justify-between py-2 text-base font-semibold"
         >
-          <li class="collection__item w-1/4 text-center">
+          <li
+            class="collection__item w-1/4 text-center hover:text-primary hover:underline underline-offset-2"
+          >
             <a href="#" class="collection__link">신상품</a>
           </li>
-          <li class="collection__item w-1/4 text-center">
+          <li
+            class="collection__item w-1/4 text-center hover:text-primary hover:underline underline-offset-2"
+          >
             <a href="#" class="collection__link">베스트</a>
           </li>
-          <li class="collection__item w-1/4 text-center">
+          <li
+            class="collection__item w-1/4 text-center hover:text-primary hover:underline underline-offset-2"
+          >
             <a href="#" class="collection__link">알뜰쇼핑</a>
           </li>
-          <li class="collection__item w-1/4 text-center">
+          <li
+            class="collection__item w-1/4 text-center hover:text-primary hover:underline underline-offset-2"
+          >
             <a href="#" class="collection__link">특가/혜택</a>
           </li>
         </ul>
