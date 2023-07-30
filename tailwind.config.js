@@ -8,6 +8,10 @@ module.exports = {
         md: '768px',
         lg: '976px',
         xl: '1050px',
+        'w-480': '120rem',
+      },
+      height: {
+        'h-92.5': '23.125rem',
       },
       colors: {
         'primary': '#5f0080',
