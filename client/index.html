@@ -16,6 +16,12 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard-dynamic-subset.css"
     />
     <link rel="stylesheet" href="./css/main.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
     <script src="./js/main.js" type="module"></script>
     <title>main page</title>
   </head>
@@ -420,25 +426,31 @@
     </nav>
     <main>
       <!-- 메인 이벤트 섹션 -->
-      <section class="event">
-        <h2 class="a11yHidden">메인 이벤트</h2>
 
-        <img
-          src="./assets/image/banner04.svg"
-          alt="컬리 이 주의 특가 한 눈에 보기"
-          class="event__image"
-        />
+      <section
+        class="event group relative mx-auto h-[23.125rem] w-[120rem] justify-center"
+      >
+        <h2 class="a11yHidden sr-only">메인 이벤트</h2>
+        <a href="#">
+          <div>
+            <img
+              src="/assets/image/banner04.svg"
+              alt="컬리 이 주의 특가 한 눈에 보기"
+              class="event__image h-[23.125rem] w-[120rem]"
+            />
+          </div>
+        </a>
 
         <button
           type="button"
-          class="button__left"
+          class="button__left absolute left-80 top-1/2 -translate-x-1/2 -translate-y-1/2 transform border-none bg-transparent opacity-0 transition-opacity duration-500 ease-in group-hover:opacity-100"
           aria-label="왼쪽 이벤트 페이지로 이동"
         >
           <img src="./assets/icons/Arrow.svg" alt="왼쪽 이동 화살표" />
         </button>
         <button
           type="button"
-          class="button__right"
+          class="button__right absolute right-80 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-180 transform border-none opacity-0 transition-opacity duration-500 ease-in group-hover:opacity-100"
           aria-label="오른쪽 이벤트 페이지로 이동"
         >
           <img src="./assets/icons/Arrow.svg" alt="오른쪽 이동 화살표" />
@@ -547,13 +559,13 @@
         ></button>
       </section>
       <!-- 배너 -->
-      <section class="banner">
-        <h2 class="a11yHidden">10월 주간 이벤트</h2>
+      <section class="banner mx-auto flex w-xl justify-center">
+        <h2 class="a11yHidden sr-only">10월 주간 이벤트</h2>
         <a href="#"
           ><img
             src="./assets/image/banner03.svg"
             alt="컬리 퍼플위크 안내 적립률up+3종 쿠폰팩, 더 풍성해진 혜택 10월24일 부터 10월28일 까지"
-            class="banner__image"
+            class="banner__image max-w-5xl py-10"
         /></a>
       </section>
 
@@ -659,20 +671,29 @@
         ></button>
       </section>
       <!-- 사이드바 -->
-      <aside class="side" role="complementary">
-        <h2 class="a11yHidden">최근 본 상품</h2>
-        <div class="side__container">
-          <button type="button" class="button__top">
+      <aside class="side relative" role="complementary">
+        <h2 class="a11yHidden sr-only">최근 본 상품</h2>
+        <div
+          class="side__container fixed right-[2.44rem] top-[30%] flex h-[13.9375rem] w-20 flex-col items-center border border-solid border-[#c4c4c4] bg-white p-2"
+        >
+          <button
+            type="button"
+            class="button__top h-[1.125rem] w-[1.125rem] border-[none] bg-transparent p-0"
+          >
             <img src="./assets/icons/Direction=Up.svg" alt="위쪽 이동 화살표" />
           </button>
-          <span class="sidebar__title"> 최근 본 상품 </span>
-          <ul>
+          <span
+            class="sidebar__title m-2 h-[1.125rem] w-[4.5rem] text-center text-xs font-semibold leading-[150%] text-[black]"
+          >
+            최근 본 상품
+          </span>
+          <ul class="side__ul list-none overflow-hidden">
             <li>
               <a href="#">
                 <img
                   src="./assets/image/goods1.svg"
                   alt="풀무원 탱탱쫄면(4개입)"
-                  class="li_image"
+                  class="li_image h-[3.21285rem] w-10"
                 />
               </a>
             </li>
@@ -681,7 +702,7 @@
                 <img
                   src="./assets/image/goods4.svg"
                   alt="프로쉬 베이비 세탁세제"
-                  class="li_image"
+                  class="li_image h-[3.21285rem] w-10"
                 />
               </a>
             </li>
@@ -690,12 +711,15 @@
                 <img
                   src="./assets/image/goods2.svg"
                   alt="온더바디 죠르디 시카 자석 선쿠션"
-                  class="li_image"
+                  class="li_image h-[3.21285rem] w-10"
                 />
               </a>
             </li>
           </ul>
-          <button type="button" class="button__bottom">
+          <button
+            type="button"
+            class="button__bottom mt-2 h-[1.125rem] w-[1.125rem] border-[none] bg-transparent p-0"
+          >
             <img
               src="./assets/icons/Direction=Down.svg"
               alt="아래쪽 이동 화살표"
@@ -927,6 +951,38 @@
         >
         <button class="mention__box__button"></button>
       </div>
+    </div>
+    <!-- 메인 팝업 -->
+    <div class="popup absolute left-[40%] top-[30%]">
+      <dialog
+        class="popup__container fixed left-[40%] top-[30%] z-[5] h-[470.4px] w-[308px] overflow-hidden rounded-2xl bg-white shadow-[0_8px_36px_0_rgba(0,0,0,0.2)]"
+        autofocus
+        open
+      >
+        <div class="popup__img relative h-[410.2px] w-full overflow-hidden">
+          <a href="#">
+            <img
+              class="img__detail absolute left-0 top-0 h-full w-full object-cover"
+              src="./assets/image/popup.svg"
+              alt="칼리 뷰티 플랫폼 상세페이지"
+            />
+          </a>
+        </div>
+        <form class="popup__form flex" method="dialog">
+          <button
+            class="button__closeToday h-[61px] w-[151.2px] border-r-[0.7px] border-solid border-[none] border-r-[#e1e1e1] bg-white p-0 px-[5.6px] text-[#333333]"
+            value="cancel"
+          >
+            오늘 하루 안보기
+          </button>
+          <button
+            class="button__close h-[61px] w-[151.2px] border-[none] bg-white p-0 text-[#333333]"
+            value="default"
+          >
+            닫기
+          </button>
+        </form>
+      </dialog>
     </div>
   </body>
 
