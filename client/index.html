@@ -17,7 +17,7 @@
     />
     <link rel="stylesheet" href="./css/main.css" />
     <script src="./js/main.js" type="module"></script>
-    <title>project</title>
+    <title>main page</title>
   </head>
 
   <body class="font-pretendard">
@@ -112,102 +112,308 @@
       </div>
     </header>
     <!-- 공통 내비게이션 -->
-    <nav class="nav">
-      <h2 class="a11yHidden">주요 메뉴</h2>
-      <div class="nav__container">
-        <div class="nav__category" aria-label="카테고리">
+    <nav class="nav w-full py-4">
+      <h2 class="sr-only">주요 메뉴</h2>
+      <div
+        class="nav__container relative mx-auto flex w-xl flex-row items-center justify-between"
+      >
+        <div
+          class="nav__category hover flex flex-row hover:bg-gray-200 group duration-300"
+          aria-label="카테고리"
+        >
           <img
-            class="nav__category__image"
+            class="nav__category__image cursor-pointer pl-2"
             src="./assets/icons/Hamburger.svg"
             alt="햄버거 버튼"
           />
-          <span class="nav__category__text">카테고리</span>
-          <ul class="nav__category__list">
-            <li class="category__item sprite sprite1">
-              <a href="#" class="category__link">선물하기</a>
+          <span
+            class="nav__category__text ml-3 mr-3 py-3 cursor-pointer font-semibold"
+            >카테고리</span
+          >
+          <ul
+            class="nav__category__list absolute top-full w-60 border border-solid border-gray-300 bg-white group-hover:visible invisible duration-300 opacity-0 group-hover:opacity-100"
+          >
+            <li
+              class="category__item sprite sprite1 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+            >
+              <a href="#" class="category__link flex flex-row">
+                <div class="mr-2 h-6 w-6">
+                  <img src="./assets/icons/navGift.png" alt="선물하기" />
+                </div>
+                선물하기
+              </a>
             </li>
-            <li class="category__item sprite sprite2">
-              <a href="#" class="category__link">채소</a>
+            <li
+              class="category__item sprite sprite2 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+            >
+              <a href="#" class="category__link flex flex-row">
+                <div class="mr-2 h-6 w-6">
+                  <img src="./assets/icons/navVegetable.png" alt="채소" />
+                </div>
+                채소
+              </a>
             </li>
-            <li class="category__item sprite sprite3">
-              <a href="#" class="category__link">과일 · 견과 · 쌀</a>
+            <li
+              class="category__item sprite sprite3 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+            >
+              <a href="#" class="category__link flex flex-row">
+                <div class="mr-2 h-6 w-6">
+                  <img src="./assets/icons/navFruit.png" alt="과일 견과류 쌀" />
+                </div>
+                과일 · 견과 · 쌀
+              </a>
             </li>
-            <li class="category__item sprite sprite4">
-              <a href="#" class="category__link">수산 · 해산 · 건어물</a>
+            <li
+              class="category__item sprite sprite4 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+            >
+              <a href="#" class="category__link flex flex-row">
+                <div class="mr-2 h-6 w-6">
+                  <img
+                    src="./assets/icons/navFish.png"
+                    alt="수산물 해산물 건어물"
+                  />
+                </div>
+                수산 · 해산 · 건어물
+              </a>
             </li>
-            <li class="category__item sprite sprite5">
-              <a href="#" class="category__link">정육 · 계란</a>
+            <li
+              class="category__item sprite sprite5 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+            >
+              <a href="#" class="category__link flex flex-row">
+                <div class="mr-2 h-6 w-6">
+                  <img src="./assets/icons/navMeat.png" alt="정육 계란" />
+                </div>
+                정육 · 계란
+              </a>
             </li>
-            <li class="category__item sprite sprite6">
-              <a href="#" class="category__link">국 · 반찬 · 메인요리</a>
+            <li
+              class="category__item sprite sprite6 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+            >
+              <a href="#" class="category__link flex flex-row">
+                <div class="mr-2 h-6 w-6">
+                  <img
+                    src="./assets/icons/navMaindish.png"
+                    alt="국 반찬 메인요리"
+                  />
+                </div>
+                국 · 반찬 · 메인요리
+              </a>
             </li>
-            <li class="category__item sprite sprite7">
-              <a href="#" class="category__link">샐러드 · 간편식</a>
+            <li
+              class="category__item sprite sprite7 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+            >
+              <a href="#" class="category__link flex flex-row">
+                <div class="mr-2 h-6 w-6">
+                  <img src="./assets/icons/navSalad.png" alt="샐러드 간편식" />
+                </div>
+                샐러드 · 간편식
+              </a>
             </li>
-            <li class="category__item sprite sprite8">
-              <a href="#" class="category__link">면 · 양념 · 오일</a>
+            <li
+              class="category__item sprite sprite8 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+            >
+              <a href="#" class="category__link flex flex-row">
+                <div class="mr-2 h-6 w-6">
+                  <img src="./assets/icons/navSpice.png" alt="면류 양념 오일" />
+                </div>
+                면 · 양념 · 오일
+              </a>
             </li>
-            <li class="category__item sprite sprite9">
-              <a href="#" class="category__link">생수 · 음료 · 우유 · 커피</a>
+            <li
+              class="category__item sprite sprite9 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+            >
+              <a href="#" class="category__link flex flex-row">
+                <div class="mr-2 h-6 w-6">
+                  <img
+                    src="./assets/icons/navDrink.png"
+                    alt="생수 음료 우유 커피"
+                  />
+                </div>
+                생수 · 음료 · 우유 · 커피
+              </a>
             </li>
-            <li class="category__item sprite sprite10">
-              <a href="#" class="category__link">간식 · 과자 · 떡</a>
+            <li
+              class="category__item sprite sprite10 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+            >
+              <a href="#" class="category__link flex flex-row">
+                <div class="mr-2 h-6 w-6">
+                  <img src="./assets/icons/navDessert.png" alt="간식 과자 떡" />
+                </div>
+                간식 · 과자 · 떡
+              </a>
             </li>
-            <li class="category__item sprite sprite11">
-              <a href="#" class="category__link">베이커리 · 치즈 · 델리</a>
+            <li
+              class="category__item sprite sprite11 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+            >
+              <a href="#" class="category__link flex flex-row">
+                <div class="mr-2 h-6 w-6">
+                  <img
+                    src="./assets/icons/navBread.png"
+                    alt="베이커리 치즈 유제품"
+                  />
+                </div>
+                베이커리 · 치즈 · 델리
+              </a>
             </li>
-            <li class="category__item sprite sprite12">
-              <a href="#" class="category__link">건강식품</a>
+            <li
+              class="category__item sprite sprite12 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+            >
+              <a href="#" class="category__link flex flex-row">
+                <div class="mr-2 h-6 w-6">
+                  <img src="./assets/icons/navHealth.png" alt="건강식품" />
+                </div>
+                건강식품
+              </a>
             </li>
-            <li class="category__item sprite sprite13">
-              <a href="#" class="category__link">와인</a>
+            <li
+              class="category__item sprite sprite13 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+            >
+              <a href="#" class="category__link flex flex-row">
+                <div class="mr-2 h-6 w-6">
+                  <img src="./assets/icons/navWine.png" alt="와인" />
+                </div>
+                와인
+              </a>
             </li>
-            <li class="category__item sprite sprite14">
-              <a href="#" class="category__link">전통주</a>
+            <li
+              class="category__item sprite sprite14 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+            >
+              <a href="#" class="category__link flex flex-row">
+                <div class="mr-2 h-6 w-6">
+                  <img
+                    src="./assets/icons/navTraditionalDrink.png"
+                    alt="전통주"
+                  />
+                </div>
+                전통주
+              </a>
             </li>
-            <li class="category__item sprite sprite15">
-              <a href="#" class="category__link">생활용품 · 리빙 · 캠핑</a>
+            <li
+              class="category__item sprite sprite15 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+            >
+              <a href="#" class="category__link flex flex-row">
+                <div class="mr-2 h-6 w-6">
+                  <img
+                    src="./assets/icons/navLiving.png"
+                    alt="생활용품 리빙 캠핑"
+                  />
+                </div>
+                생활용품 · 리빙 · 캠핑
+              </a>
             </li>
-            <li class="category__item sprite sprite16">
-              <a href="#" class="category__link">스킨케어 · 메이크업</a>
+            <li
+              class="category__item sprite sprite16 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+            >
+              <a href="#" class="category__link flex flex-row">
+                <div class="mr-2 h-6 w-6">
+                  <img
+                    src="./assets/icons/navBeauty.png"
+                    alt="스킨케어 메이크업"
+                  />
+                </div>
+                스킨케어 · 메이크업
+              </a>
             </li>
-            <li class="category__item sprite sprite17">
-              <a href="#" class="category__link">헤어 · 바디 · 구강</a>
+            <li
+              class="category__item sprite sprite17 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+            >
+              <a href="#" class="category__link flex flex-row">
+                <div class="mr-2 h-6 w-6">
+                  <img
+                    src="./assets/icons/navBody.png"
+                    alt="헤어 바디 구강용품"
+                  />
+                </div>
+                헤어 · 바디 · 구강
+              </a>
             </li>
-            <li class="category__item sprite sprite18">
-              <a href="#" class="category__link">주방용품</a>
+            <li
+              class="category__item sprite sprite18 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+            >
+              <a href="#" class="category__link flex flex-row">
+                <div class="mr-2 h-6 w-6">
+                  <img src="./assets/icons/navKitchen.png" alt="주방용품" />
+                </div>
+                주방용품
+              </a>
             </li>
-            <li class="category__item sprite sprite19">
-              <a href="#" class="category__link">가전제품</a>
+            <li
+              class="category__item sprite sprite19 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+            >
+              <a href="#" class="category__link flex flex-row">
+                <div class="mr-2 h-6 w-6">
+                  <img
+                    src="./assets/icons/navHomeAppliances.png"
+                    alt="가전제품"
+                  />
+                </div>
+                가전제품
+              </a>
             </li>
-            <li class="category__item sprite sprite20">
-              <a href="#" class="category__link">반려동물</a>
+            <li
+              class="category__item sprite sprite20 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+            >
+              <a href="#" class="category__link flex flex-row">
+                <div class="mr-2 h-6 w-6">
+                  <img src="./assets/icons/navPet.png" alt="반려동물용품" />
+                </div>
+                반려동물
+              </a>
             </li>
-            <li class="category__item sprite sprite21">
-              <a href="#" class="category__link">베이비 · 키즈 · 완구</a>
+            <li
+              class="category__item sprite sprite21 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+            >
+              <a href="#" class="category__link flex flex-row">
+                <div class="mr-2 h-6 w-6">
+                  <img
+                    src="./assets/icons/navBaby.png"
+                    alt="베이비 키즈 완구"
+                  />
+                </div>
+                베이비 · 키즈 · 완구
+              </a>
             </li>
-            <li class="category__item sprite sprite22">
-              <a href="#" class="category__link">여행 · 티켓</a>
+            <li
+              class="category__item sprite sprite22 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+            >
+              <a href="#" class="category__link flex flex-row">
+                <div class="mr-2 h-6 w-6">
+                  <img src="./assets/icons/navTrip.png" alt="여행 티켓" />
+                </div>
+                여행 · 티켓
+              </a>
             </li>
           </ul>
         </div>
-        <ul class="nav__collection__list">
-          <li class="collection__item">
+        <ul
+          class="nav__collection__list flex w-1/2 flex-row justify-between py-2 text-base font-semibold"
+        >
+          <li
+            class="collection__item w-1/4 text-center hover:text-primary hover:underline underline-offset-2"
+          >
             <a href="#" class="collection__link">신상품</a>
           </li>
-          <li class="collection__item">
+          <li
+            class="collection__item w-1/4 text-center hover:text-primary hover:underline underline-offset-2"
+          >
             <a href="#" class="collection__link">베스트</a>
           </li>
-          <li class="collection__item">
+          <li
+            class="collection__item w-1/4 text-center hover:text-primary hover:underline underline-offset-2"
+          >
             <a href="#" class="collection__link">알뜰쇼핑</a>
           </li>
-          <li class="collection__item">
+          <li
+            class="collection__item w-1/4 text-center hover:text-primary hover:underline underline-offset-2"
+          >
             <a href="#" class="collection__link">특가/혜택</a>
           </li>
         </ul>
-        <div class="nav__info">
+        <div
+          class="nav__info borderr float-right rounded-full border border-solid border-gray-300 px-2 py-1 text-xs"
+        >
           <a href="#" class="nav__info__link"
-            ><span class="primary">샛별·택배</span> 배송안내</a
+            ><span class="primary text-primary">샛별·택배</span> 배송안내</a
           >
         </div>
       </div>
@@ -218,8 +424,9 @@
         <h2 class="a11yHidden">메인 이벤트</h2>
 
         <img
-            src="./assets/image/banner04.svg"
-            alt="컬리 이 주의 특가 한 눈에 보기" class="event__image"
+          src="./assets/image/banner04.svg"
+          alt="컬리 이 주의 특가 한 눈에 보기"
+          class="event__image"
         />
 
         <button
@@ -236,7 +443,6 @@
         >
           <img src="./assets/icons/Arrow.svg" alt="오른쪽 이동 화살표" />
         </button>
-        
       </section>
       <!-- 상품1 섹션 -->
       <section>
@@ -412,7 +618,8 @@
         <a href="#"
           ><img
             src="./assets/image/banner03.svg"
-            alt="컬리 퍼플위크 안내 적립률up+3종 쿠폰팩, 더 풍성해진 혜택 10월24일 부터 10월28일 까지" class="banner__image"
+            alt="컬리 퍼플위크 안내 적립률up+3종 쿠폰팩, 더 풍성해진 혜택 10월24일 부터 10월28일 까지"
+            class="banner__image"
         /></a>
       </section> -->
       <!-- 상품2 섹션 -->
@@ -585,10 +792,7 @@
       <aside class="side" role="complementary">
         <h2 class="a11yHidden">최근 본 상품</h2>
         <div class="side__container">
-          <button
-            type="button"
-            class="button__top"
-          >
+          <button type="button" class="button__top">
             <img src="./assets/icons/Direction=Up.svg" alt="위쪽 이동 화살표" />
           </button>
           <span class="sidebar__title"> 최근 본 상품 </span>
@@ -621,11 +825,11 @@
               </a>
             </li>
           </ul>
-          <button
-            type="button"
-            class="button__bottom"
-          >
-            <img src="./assets/icons/Direction=Down.svg" alt="아래쪽 이동 화살표" />
+          <button type="button" class="button__bottom">
+            <img
+              src="./assets/icons/Direction=Down.svg"
+              alt="아래쪽 이동 화살표"
+            />
           </button>
         </div>
       </aside>
