@@ -430,7 +430,7 @@
       <section
         class="event group relative mx-auto h-[23.125rem] w-[120rem] justify-center"
       >
-        <h2 class="a11yHidden sr-only">메인 이벤트</h2>
+        <h2 class="sr-only">메인 이벤트</h2>
         <a href="#">
           <div>
             <img
@@ -626,14 +626,14 @@
       </section>
       <!-- 배너 -->
       <section class="banner mx-auto flex w-xl justify-center">
-        <h2 class="a11yHidden sr-only">10월 주간 이벤트</h2>
+        <h2 class="sr-only">10월 주간 이벤트</h2>
         <a href="#"
           ><img
             src="./assets/image/banner03.svg"
             alt="컬리 퍼플위크 안내 적립률up+3종 쿠폰팩, 더 풍성해진 혜택 10월24일 부터 10월28일 까지"
             class="banner__image max-w-5xl py-10"
         /></a>
-      </section> -->
+      </section>
       <!-- 상품2 섹션 -->
       <section>
         <!-- 상품2 제목 -->
@@ -802,7 +802,7 @@
       </section>
       <!-- 사이드바 -->
       <aside class="side relative" role="complementary">
-        <h2 class="a11yHidden sr-only">최근 본 상품</h2>
+        <h2 class="sr-only">최근 본 상품</h2>
         <div
           class="side__container fixed right-[2.44rem] top-[30%] flex h-[13.9375rem] w-20 flex-col items-center border border-solid border-[#c4c4c4] bg-white p-2"
         >
@@ -1114,7 +1114,61 @@
         </form>
       </dialog>
     </div>
-  </body>
+    <!-- 모달 add__cart-->
+    <!-- <div class="modal__background">
+      <div class="modal__window">
+        <dialog class="modal__cart" aria-labelledby="cartGoods" open>
+          <h2 class="sr-only" id="cartGoods">장바구니</h2>
+
+          <div class="modal__cart__goodsGroup">
+            <dl class="cart__goods">
+              <dt class="sr-only">상품명</dt>
+              <dd class="cart__goodsName">
+                <span aria-hidden="true">[</span>풀무원<span
+                  aria-hidden="true"
+                  >]</span
+                >
+                탱탱쫄면 (4개입)
+              </dd>
+              <dt class="sr-only">정상가</dt>
+              <dd class="cart__regPrice"><ins>4,980 원</ins></dd>
+            </dl> -->
+
+            <!-- css를 통한 수량과 합계 변화가 어려워 고정형으로 처리 -->
+            <!-- <div class="count__container">
+              <button type="button" class="button__reduce" aria-label="감소">
+                -
+              </button>
+              <span class="count__quantity">1</span>
+              <button type="button" class="button__add" aria-label="증가">
+                +
+              </button>
+            </div>
+          </div>
+
+          <div class="cart__count">
+            <dl class="cart__sum">
+              <dt class="cart__sumName">합계</dt>
+              <dd class="cart__sumPrice">4,980 원</dd>
+            </dl>
+
+            <div class="cart__point">
+              <span class="point__title">적립</span>
+              <span class="point__detail">구매 시 5원 적립</span>
+            </div>
+          </div>
+
+          <form class="close"> -->
+            <!-- method="dialog" -->
+            <!-- <button class="button__cancel" value="cancel">취소</button>
+            <button class="button__addCart" value="default">
+              장바구니 담기
+            </button>
+          </form>
+        </dialog>
+      </div>
+    </div>
+  </body> -->
 
 
 
