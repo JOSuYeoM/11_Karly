@@ -828,60 +828,73 @@
       </aside>
     </main>
     <!-- 공통 푸터 -->
-    <footer class="footer">
-      <div class="footer__contents">
-        <div class="footer__cs" role="complementary">
-          <h2 class="footer__cs__title">고객행복센터</h2>
-          <div class="footer__cs__info">
-            <span class="cs__infoNumber">1644-1107</span
-            ><span class="cs__infoTime">월~토요일 오전 7시 - 오후 6시</span>
+    <footer class="footer w-full pt-7 border-t">
+      <div class="footer__contents mx-auto flex w-xl text-content py-6">
+        <div class="footer__cs text-base w-1/2" role="complementary">
+          <h2 class="footer__cs__title text-22 font-bold mb-4">고객행복센터</h2>
+          <div class="footer__cs__info items-center flex mb-5">
+            <span class="cs__infoNumber font-bold text-4xl mr-3"
+              >1644-1107</span
+            >
+            <span class="cs__infoTime text-base font-semibold text-center"
+              >월~토요일 오전 7시 - 오후 6시</span
+            >
           </div>
           <div class="footer__cs__inquiry">
-            <div class="cs__inquiryKaKao">
-              <button class="cs__inquiry__button" type="button">
+            <div class="cs__inquiryKaKao flex mb-6">
+              <button
+                class="cs__inquiry__button cursor-pointer mr-4 py-2 h-12 w-36 border"
+                type="button"
+              >
                 카카오톡 문의
               </button>
-              <div class="cs__inquiry__description">
+              <div class="cs__inquiry__description flex flex-col">
                 <span> 월~토요일 | 오전 7시 - 오후 6시 </span>
                 <span>일/공휴일 | 오전 7시 - 오후 1시</span>
               </div>
             </div>
-            <div class="cs__inquiry1to1">
-              <button class="cs__inquiry__button" type="button">
+            <div class="cs__inquiry1to1 flex mb-6">
+              <button
+                class="cs__inquiry__button cursor-pointer mr-4 py-2 h-12 w-36 border"
+                type="button"
+              >
                 1:1 문의
               </button>
-              <div class="cs__inquiry__description">
+              <div class="cs__inquiry__description flex flex-col">
                 <span>365일</span>
                 <span>고객센터 운영시간에 순차적으로 답변드리겠습니다.</span>
               </div>
             </div>
-            <div class="cs__inquiryBulk">
-              <button class="cs__inquiry__button" type="button">
+            <div class="cs__inquiryBulk flex mb-5">
+              <button
+                class="cs__inquiry__button cursor-pointer mr-4 h-12 w-36 py-2 border"
+                type="button"
+              >
                 대량주문 문의
               </button>
-              <div class="cs__inquiry__description">
+              <div class="cs__inquiry__description flex flex-col">
                 <span>월~금요일 | 오전9시 - 오후 6시</span>
                 <span>점심시간 | 낮 12시 - 오후 1시</span>
               </div>
             </div>
           </div>
-          <div class="footer__cs__nonMember">
+          <div class="footer__cs__nonMember font-normal flex flex-col">
             <span>
-              비회원 문의:
-              <a href="mailto:help@karlycorp.com" class="primary"
+              비회원 문의 :
+              <a href="mailto:help@karlycorp.com" class="text-primary"
                 >help@karlycorp.com</a
               >
             </span>
             <span>
-              비회원 대량주문 문의:
-              <a href="mailto:help@karlycorp.com" class="primary"
+              비회원 대량주문 문의 :
+              <a href="mailto:help@karlycorp.com" class="text-primary"
                 >help@karlycorp.com</a
               >
             </span>
           </div>
         </div>
-        <div class="footer__about" role="complementary">
-          <ul class="footer__about__list">
+        <div class="footer__about w-1/2" role="complementary">
+          <ul class="footer__about__list flex justify-between mb-6 text-base">
             <li class="about__item">
               <a href="#" class="about__link">칼리소개</a>
             </li>
@@ -901,7 +914,9 @@
               <a href="#" class="about__link">이용안내</a>
             </li>
           </ul>
-          <address class="footer__companyInfo">
+          <address
+            class="footer__companyInfo not-italic text-sm flex flex-col gap-1 mb-7"
+          >
             <p class="footer__companyInfo__description">
               <span>법인명 (상호) : 주식회사 컬리</span>
               <span>|</span>
@@ -910,7 +925,7 @@
               <span
                 ><a
                   href="#"
-                  class="primary"
+                  class="text-primary"
                   target="_blank"
                   rel="noreferrer noopener"
                   >사업자정보 확인</a
@@ -932,7 +947,7 @@
               <span>|</span>
               <span
                 >제휴문의 :
-                <a href="mailto:business@karlycorp.com" class="primary"
+                <a href="mailto:business@karlycorp.com" class="text-primary"
                   >business@karlycorp.com</a
                 ></span
               >
@@ -940,7 +955,7 @@
             <p class="footer__companyInfo__description">
               <span
                 >채용문의 :
-                <a href="mailto:recruit@karlycorp.com" class="primary"
+                <a href="mailto:recruit@karlycorp.com" class="text-primary"
                   >recruit@karlycorp.com</a
                 ></span
               >
@@ -950,109 +965,140 @@
             </p>
           </address>
           <div class="footer__sns">
-            <ul class="footer__snsList">
+            <ul class="footer__snsList flex gap-x-5">
               <li class="footer__snsLink" id="blogLink">
-                <a href="#" target="_blank" rel="noreferrer noopener"></a>
+                <a href="#" target="_blank" rel="noreferrer noopener">
+                  <img
+                    src="./assets/icons/sns_blog.png"
+                    alt="마켓컬리 블로그"
+                  />
+                </a>
               </li>
               <li class="footer__snsLink" id="facebookLink">
-                <a href="#" target="_blank" rel="noreferrer noopener"></a>
+                <a href="#" target="_blank" rel="noreferrer noopener">
+                  <img
+                    src="./assets/icons/sns_facebook.png"
+                    alt="마켓컬리 페이스북"
+                  />
+                </a>
               </li>
               <li class="footer__snsLink" id="instagramLink">
-                <a href="#" target="_blank" rel="noreferrer noopener"></a>
+                <a href="#" target="_blank" rel="noreferrer noopener">
+                  <img
+                    src="./assets/icons/sns_instagram.png"
+                    alt="마켓컬리 인스타그램"
+                  />
+                </a>
               </li>
               <li class="footer__snsLink" id="snsLink">
-                <a href="#" target="_blank" rel="noreferrer noopener"></a>
+                <a href="#" target="_blank" rel="noreferrer noopener">
+                  <img
+                    src="./assets/icons/sns_post.png"
+                    alt="마켓컬리 네이버포스트"
+                  />
+                </a>
               </li>
               <li class="footer__snsLink" id="youtubeLink">
-                <a href="#" target="_blank" rel="noreferrer noopener"></a>
+                <a href="#" target="_blank" rel="noreferrer noopener">
+                  <img
+                    src="./assets/icons/sns_youtube.png"
+                    alt="마켓컬리 유튜브"
+                  />
+                </a>
               </li>
             </ul>
           </div>
         </div>
-        <div class="footer__mark" role="complementary">
-          <button type="button" class="footer__mark__button">
+      </div>
+      <div
+        class="footer__mark text-content border-t gap-4 pt-6 pb-8 text-10 flex flex-row mx-auto w-xl"
+        role="complementary"
+      >
+        <div class="mark__box flex w-1/4 gap-2 flex-row">
+          <button type="button" class="footer__mark__button mr-1">
             <img
-              class="mark__image"
-              src="./assets/icons/footer1.svg"
+              class="mark__image align-top w-12"
+              src="./assets/icons/footer11.svg"
               alt="정보보호 관리체계 인증마크"
             />
-            <div class="mark__descriptionWrapper">
-              <span class="mark__description">
-                [인증범위] 마켓칼리 쇼핑몰 서비스 개발 운영(심사받지 않은 물리적
-                인프라 제외)
-              </span>
-              <span class="mark__description">
-                [유효기간] 2022.01.19 ~ 2025.01.18
-              </span>
-            </div>
           </button>
-          <button type="button" class="footer__mark__button">
+          <button class="mark__description text-left break-words">
+            <span>
+              [인증범위] 마켓칼리 쇼핑몰 서비스 개발 운영(심사받지 않은 물리적
+              인프라 제외)
+              <br />
+              [유효기간] 2022.01.19 ~ 2025.01.18
+            </span>
+          </button>
+        </div>
+        <div class="mark__box flex w-1/4 gap-2 flex-row">
+          <button type="button" class="footer__mark__button mr-1">
             <img
-              class="mark__image"
-              src="./assets/icons/footer2.svg"
+              class="mark__image align-top"
+              src="./assets/icons/footer22.svg"
               alt="개인정보처리시스템 인증마크"
             />
-            <div class="mark__descriptionWrapper">
-              <span class="mark__description">개인정보보호 우수 웹사이트</span>
-              <span class="mark__description">
-                개인정보처리시스템 인증 (ePRIVACY PLUS)
-              </span>
-            </div>
           </button>
-          <button type="button" class="footer__mark__button">
+          <button class="mark__description text-left break-words">
+            <span>
+              개인정보보호 우수 웹사이트
+              <br />
+              개인정보처리시스템 인증 (ePRIVACY PLUS)
+            </span>
+          </button>
+        </div>
+        <div class="mark__box flex w-1/4 gap-2 flex-row">
+          <button type="button" class="footer__mark__button mr-1">
             <img
-              class="mark__image"
-              src="./assets/icons/footer3.svg"
+              class="mark__image align-top"
+              src="./assets/icons/footer33.svg"
               alt="토스페이먼츠 구매안전 인증서"
             />
-            <div class="mark__descriptionWrapper">
-              <span class="mark__description">
-                토스페이먼츠 구매안전(에스크로) 서비스를 이용하실 수 있습니다.
-              </span>
-            </div>
           </button>
-          <button type="button" class="footer__mark__button">
+          <button class="mark__description text-left break-words">
+            <span>
+              토스페이먼츠 구매안전(에스크로) 서비스를 이용하실 수 있습니다.
+            </span>
+          </button>
+        </div>
+        <div class="mark__box flex w-1/4 gap-2 flex-row">
+          <button type="button" class="footer__mark__button mr-1">
             <img
-              class="mark__image"
+              class="mark__image align-top w-[70px]"
               src="./assets/icons/footer4.svg"
               alt="우리은행 안전거래 인증서"
             />
-            <div class="mark__descriptionWrapper">
-              <span class="mark__description">
-                <span
-                  >고객님이 현금으로 결제한 금액에 대해 우리은행과 채무지급보증
-                  계약을 체결하여 안전거래를 보장하고 있습니다.</span
-                >
-              </span>
-            </div>
+          </button>
+          <button class="mark__description text-left break-words">
+            <span>
+              고객님이 현금으로 결제한 금액에 대해 우리은행과 채무지급보증
+              계약을 체결하여 안전거래를 보장하고 있습니다.
+            </span>
           </button>
         </div>
       </div>
-      <div class="footer__copyright" role="complementary">
-        <span class="footer__copyright__info">
+      <div
+        class="footer__copyright w-full bg-gray-200 text-xs text-center text-light-gray-text pt-5 pb-7"
+        role="complementary"
+      >
+        <span class="footer__copyright__info w-full inline-block">
           마켓칼리에서 판매되는 상품 중에는 마켓칼리에 입점한 개별 판매자가
           판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.
         </span>
-        <span class="footer__copyright__info"
-          >마켓플레이스(오픈마켓) 상품의 경우 칼리는 통신판매중개자로서
+        <span class="footer__copyright__info w-full inline-block mt-1">
+          마켓플레이스(오픈마켓) 상품의 경우 칼리는 통신판매중개자로서
           통신판매의 당사자가 아닙니다. 칼리는 해당 상품의 주문, 품질, 교환/환불
-          등 의무와 책임을 부담하지 않습니다.</span
+          등 의무와 책임을 부담하지 않습니다.
+        </span>
+        <em
+          class="footer__copyright__notice not-italic w-full inline-block mt-5"
         >
-        <em class="footer__copyright__notice">
           &copy; KARLY CORP. ALL RIGHTS RESERVED
         </em>
       </div>
     </footer>
-    <div class="mention">
-      <div class="mention__box">
-        <span class="mention__box__text"
-          >지금 가입하고 인기상품 100원에 받아가세요!</span
-        >
-        <button class="mention__box__button"></button>
-      </div>
-    </div>
     <!-- 메인 팝업 -->
-    <div class="popup absolute left-[40%] top-[30%]">
+    <!-- <div class="popup absolute left-[40%] top-[30%]">
       <dialog
         class="popup__container fixed left-[40%] top-[30%] z-[5] h-[470.4px] w-[308px] overflow-hidden rounded-2xl bg-white shadow-[0_8px_36px_0_rgba(0,0,0,0.2)]"
         autofocus
@@ -1082,7 +1128,7 @@
           </button>
         </form>
       </dialog>
-    </div>
+    </div> -->
     <!-- 모달 add__cart-->
     <!-- <div class="modal__background">
       <div class="modal__window">
@@ -1136,7 +1182,6 @@
           </form>
         </dialog>
       </div>
-    </div>
-  </body> -->
+    </div> -->
   </body>
 </html>
