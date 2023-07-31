@@ -11,6 +11,14 @@
       href="https://res.kurly.com/kurly/logo/icon-192x192.png"
       type="image/xml+svg" />
  
+      type="image/xml+svg"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
+
     <link
       rel="stylesheet"
       as="style"
@@ -30,26 +38,65 @@
   <body class="font-pretendard">
     <!-- 공통 헤더 -->
     <div class="header__mention">
-      <a href="#" class="header__mention__text h-11 flex text-base justify-center items-center bg-primary text-white">지금 가입하고 인기상품 100원에 받아가세요!</a>
+      <a
+        href="#"
+        class="header__mention__text h-11 flex text-base justify-center items-center bg-primary text-white"
+        >지금 가입하고 인기상품 100원에 받아가세요!</a
+      >
     </div>
 
     <header class="header w-xl mx-auto">
       <ul class="header__group__memberOnly flex justify-end pt-4 gap-x-3">
         <li class="group__memberOnlyLi text-xs">
-          <a class="group__memberOnlyLi__link group__memberOnlyLi--active text-primary" href="#">회원가입</a>
+          <a
+            class="group__memberOnlyLi__link group__memberOnlyLi--active text-primary"
+            href="#"
+            >회원가입</a
+          >
         </li>
         <li class="group__memberOnlyLi text-xs">
-          <span class="group__memberOnlyLi__divider" aria-hidden="true">ㅣ</span>
+          <span class="group__memberOnlyLi__divider" aria-hidden="true">
+            ㅣ
+          </span>
           <a href="login.html" class="group__memberOnlyLi__link ml-2">로그인</a>
         </li>
-        <li class="group__memberOnlyLi text-xs">
-          <span class="group__memberOnlyLi__divider" aria-hidden="true"
-            >ㅣ</span
-          ><a href="#" class="group__memberOnlyLi__link ml-2">고객센터</a>
+        <li class="group__memberOnlyLi text-xs flex">
+          <span class="group__memberOnlyLi__divider" aria-hidden="true">
+            ㅣ
+          </span>
+          <div class="memberOnly__help relative duration-200 group">
+            <a
+              href="#"
+              class="group__memberOnlyLi__link ml-2 flex items-center"
+            >
+              고객센터
+              <img
+                class="w-2 ml-1 inline-block"
+                src="./assets/icons/caret-down-solid.svg"
+                alt="고객센터"
+              />
+            </a>
+            <ul
+              class="memberOnly__help w-32 right-0 top-6 bg-white border flex flex-col gap-2 px-3 pr-12 py-3 text-content absolute group-hover:visible invisible duration-300 opacity-0 group-hover:opacity-100 z-10"
+            >
+              <li class="help__item">
+                <a href="#">공지사항</a>
+              </li>
+              <li class="help__item">
+                <a href="#">자주하는 질문</a>
+              </li>
+              <li class="help__item">
+                <a href="#">1:1 문의</a>
+              </li>
+              <li class="help__item">
+                <a href="#">대량주문 문의</a>
+              </li>
+            </ul>
+          </div>
         </li>
       </ul>
 
-      <div class="header__group flex justify-between pb-5">
+      <div class="header__group flex justify-between">
         <div class="header__group__tab pt-8 flex">
           <h1 class="group__logo">
             <img
@@ -60,15 +107,24 @@
           </h1>
           <ul class="group__itemBox flex gap-x-3">
             <li class="group__itemBox__item">
-              <a class="itemBox__link text-21 text-primary font-semibold " href="#"
+              <a
+                class="itemBox__link text-21 text-primary font-semibold"
+                href="#"
                 >마켓칼리</a
               >
             </li>
-            
+
             <li class="group__itemBox__item">
-              <span class="itemBox__item__divider text-21 text-gray-200 font-semibold mr-2" aria-hidden="true">ㅣ</span
-                >
-              <a class="itemBox__link text-21 text-light-gray-text font-semibold href="#">뷰티칼리<sup class="orange text-orange-600"> N</sup></a>
+              <span
+                class="itemBox__item__divider text-21 text-gray-200 font-semibold mr-2"
+                aria-hidden="true"
+                >ㅣ</span
+              >
+              <a
+                href="#"
+                class="itemBox__link text-21 text-light-gray-text font-semibold hover:text-primary duration-300"
+                >뷰티칼리<sup class="orange text-orange-600"> N</sup></a
+              >
             </li>
           </ul>
         </div>
@@ -84,10 +140,15 @@
                   id="search"
                   name="search"
                   required
-                  class="group__input w-96 h-9 px-5  border rounded border-primary"
+                  class="group__input w-96 h-9 px-5 border rounded border-primary"
                   placeholder="검색어를 입력해주세요."
                 />
-                <button type="submit" class="searchForm__group__button absolute top-0 right-0 bg-transparent border-none p-0"><img src="./assets/icons/Search.svg" alt="배송지 등록하기"></button>
+                <button
+                  type="submit"
+                  class="searchForm__group__button absolute top-0 right-0 bg-transparent border-none p-0"
+                >
+                  <img src="./assets/icons/Search.svg" alt="배송지 등록하기" />
+                </button>
               </div>
             </div>
           </fieldset>
@@ -96,23 +157,25 @@
         <ul class="header__group__myPage flex pt-7 gap-x-5">
           <li class="group__myPageLi">
             <a href="#">
-              <img src="./assets/icons/Location.svg" alt="배송지 등록하기">
+              <img src="./assets/icons/Location.svg" alt="배송지 등록하기" />
             </a>
           </li>
 
           <li class="group__myPageLi">
             <a href="#">
-              <img src="./assets/icons/Heart.svg" alt="찜하기">
+              <img src="./assets/icons/Heart.svg" alt="찜하기" />
             </a>
           </li>
 
           <li class="group__myPageLi">
             <a href="#">
-              <img src="./assets/icons/icon-cart.svg" alt="장바구니로 이동하기">
+              <img
+                src="./assets/icons/icon-cart.svg"
+                alt="장바구니로 이동하기"
+              />
             </a>
           </li>
         </ul>
-        
       </div>
     </header>
 
@@ -1098,7 +1161,7 @@
     </footer>
 
     <!-- 메인 팝업 -->
-    <div class="popup absolute left-[40%] top-[30%]">
+    <!-- <div class="popup absolute left-[40%] top-[30%]">
       <dialog
         class="popup__container fixed left-[40%] top-[30%] z-[5] h-[470.4px] w-[308px] overflow-hidden rounded-2xl bg-white shadow-[0_8px_36px_0_rgba(0,0,0,0.2)]"
         autofocus
@@ -1128,7 +1191,7 @@
           </button>
         </form>
       </dialog>
-    </div>
+    </div> -->
     <!-- 모달 add__cart-->
     <!-- <div class="modal__background">
       <div class="modal__window">
