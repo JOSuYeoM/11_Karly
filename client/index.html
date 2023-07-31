@@ -4,11 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 파비콘 마켓컬리 -->
     <link
       rel="icon"
-      href="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+      href="https://res.kurly.com/kurly/logo/icon-192x192.png"
       type="image/xml+svg"
     />
+ 
     <link
       rel="stylesheet"
       as="style"
@@ -28,95 +31,98 @@
 
   <body class="font-pretendard">
     <!-- 공통 헤더 -->
-    <header class="header">
-      <div class="header__group clearfix">
-        <div class="header__group__tab">
+    <div class="header__mention">
+      <a href="#" class="header__mention__text h-11 flex text-base justify-center items-center bg-primary text-white">지금 가입하고 인기상품 100원에 받아가세요!</a>
+    </div>
+
+    <header class="header w-xl mx-auto">
+      <ul class="header__group__memberOnly flex justify-end pt-4 gap-x-3 ">
+        <li class="group__memberOnlyLi text-xs">
+          <a
+            class="group__memberOnlyLi__link group__memberOnlyLi--active text-primary"
+            href="#"
+            >회원가입</a>
+        </li>
+        <li class="group__memberOnlyLi text-xs">
+          <span class="group__memberOnlyLi__divider" aria-hidden="true"
+            >ㅣ</span
+          >
+          <a href="login.html" class="group__memberOnlyLi__link ml-2">로그인</a>
+        </li>
+        <li class="group__memberOnlyLi text-xs">
+          <span class="group__memberOnlyLi__divider" aria-hidden="true"
+            >ㅣ</span
+          ><a href="#" class="group__memberOnlyLi__link ml-2">고객센터</a>
+        </li>
+      </ul>
+
+      <div class="header__group flex justify-between pb-5">
+        <div class="header__group__tab pt-8 flex">
           <h1 class="group__logo">
             <img
-              class="group__logo_img"
+              class="group__logo_img pr-3"
               src="./assets/icons/Logo.svg"
               alt="마켓칼리 로고"
             />
           </h1>
-          <ul class="group__itemBox">
+          <ul class="group__itemBox flex gap-x-3">
             <li class="group__itemBox__item">
-              <a class="itemBox__link itemBox__link--active" href="#"
+              <a class="itemBox__link text-21 text-primary font-semibold " href="#"
                 >마켓칼리</a
               >
             </li>
+            
             <li class="group__itemBox__item">
-              <span class="itemBox__item__divider" aria-hidden="true">ㅣ</span
-              ><a class="itemBox__link" href="#">뷰티칼리</a>
-              <!-- 고객센터 옆 화살표는 li background로 처리 -->
+              <span class="itemBox__item__divider text-21 text-gray-200 font-semibold mr-2" aria-hidden="true">ㅣ</span
+                >
+              <a class="itemBox__link text-21 text-light-gray-text font-semibold href="#">뷰티칼리<sup class="orange text-orange-600"> N</sup></a>
             </li>
           </ul>
         </div>
-        <form action="/" method="POST" class="header__group__searchForm">
+
+        <form action="/" method="POST" class="header__group__searchForm pt-7">
           <fieldset class="group__searchForm__fieldset">
-            <legend class="a11yHidden">검색 폼</legend>
+            <legend class="sr-only">검색 폼</legend>
             <div class="searchForm__group">
-              <div class="searchForm__group__formInputBox">
-                <label for="search" class="a11yHidden">검색어</label>
+              <div class="searchForm__group__formInputBox relative">
+                <label for="search" class="sr-only">검색어</label>
                 <input
                   type="search"
                   id="search"
                   name="search"
                   required
-                  class="group__input"
-                  placeholder="검색어를 입력하세요."
+                  class="group__input w-96 h-9 px-5  border rounded border-primary"
+                  placeholder="검색어를 입력해주세요."
                 />
+                <button type="submit" class="searchForm__group__button absolute top-0 right-0 bg-transparent border-none p-0"><img src="./assets/icons/Search.svg" alt="배송지 등록하기"></button>
               </div>
-              <button type="submit" class="searchForm__group__button"></button>
             </div>
           </fieldset>
         </form>
-        <ul class="header__group__myPage">
+
+        <ul class="header__group__myPage flex pt-7 gap-x-5">
           <li class="group__myPageLi">
-            <button
-              class="group__myPageLi__button"
-              type="button"
-              aria-label="배송지 등록"
-            ></button>
+            <a href="#">
+              <img src="./assets/icons/Location.svg" alt="배송지 등록하기">
+            </a>
           </li>
 
           <li class="group__myPageLi">
-            <button
-              class="group__myPageLi__button"
-              type="button"
-              aria-label="찜하기"
-            ></button>
+            <a href="#">
+              <img src="./assets/icons/Heart.svg" alt="찜하기">
+            </a>
           </li>
+
           <li class="group__myPageLi">
-            <button
-              class="group__myPageLi__button"
-              type="button"
-              aria-label="장바구니"
-            ></button>
+            <a href="#">
+              <img src="./assets/icons/icon-cart.svg" alt="장바구니로 이동하기">
+            </a>
           </li>
         </ul>
-        <ul class="header__group__memberOnly">
-          <li class="group__memberOnlyLi">
-            <a
-              class="group__memberOnlyLi__link group__memberOnlyLi--active"
-              href="#"
-              >회원가입</a
-            >
-          </li>
-          <li class="group__memberOnlyLi">
-            <span class="group__memberOnlyLi__divider" aria-hidden="true"
-              >ㅣ</span
-            >
-            <a href="/login.html" class="group__memberOnlyLi__link">로그인</a>
-          </li>
-          <li class="group__memberOnlyLi">
-            <span class="group__memberOnlyLi__divider" aria-hidden="true"
-              >ㅣ</span
-            ><a href="#" class="group__memberOnlyLi__link">고객센터</a>
-            <!-- 고객센터 옆 화살표는 li background로 처리 -->
-          </li>
-        </ul>
+        
       </div>
     </header>
+
     <!-- 공통 내비게이션 -->
     <nav class="nav w-full py-4">
       <h2 class="sr-only">주요 메뉴</h2>
@@ -461,7 +467,7 @@
       <section>
         <!-- 상품1 제목 -->
 
-        <h2 class="font-bold text-28 text-center text-content mb-9">
+        <h2 class="font-bold text-28 text-center text-content mb-9 pt-10">
           이 상품 어때요?
         </h2>
 
@@ -622,7 +628,7 @@
       <!-- 상품2 섹션 -->
       <section>
         <!-- 상품2 제목 -->
-        <h2 class="font-bold text-28 text-center text-content mb-9">
+        <h2 class="font-bold text-28 text-center text-content mb-9 pt-10">
           놓치면 후회할 가격
         </h2>
         <!-- 상품2 목록 -->
@@ -1043,16 +1049,9 @@
         </em>
       </div>
     </footer>
-    <div class="mention">
-      <div class="mention__box">
-        <span class="mention__box__text"
-          >지금 가입하고 인기상품 100원에 받아가세요!</span
-        >
-        <button class="mention__box__button"></button>
-      </div>
-    </div>
+
     <!-- 메인 팝업 -->
-    <div class="popup absolute left-[40%] top-[30%]">
+    <!-- <div class="popup absolute left-[40%] top-[30%]">
       <dialog
         class="popup__container fixed left-[40%] top-[30%] z-[5] h-[470.4px] w-[308px] overflow-hidden rounded-2xl bg-white shadow-[0_8px_36px_0_rgba(0,0,0,0.2)]"
         autofocus
@@ -1082,7 +1081,7 @@
           </button>
         </form>
       </dialog>
-    </div>
+    </div> -->
     <!-- 모달 add__cart-->
     <!-- <div class="modal__background">
       <div class="modal__window">
@@ -1136,7 +1135,6 @@
           </form>
         </dialog>
       </div>
-    </div>
-  </body> -->
+    </div>-->
   </body>
 </html>
