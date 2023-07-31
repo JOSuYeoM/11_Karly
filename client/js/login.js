@@ -62,7 +62,7 @@ button.addEventListener('click', (e) =>{
 
   if(emailPass && pwPass){
     if(user.id === emailValue && user.pw === pwValue){
-      window.location.href = 'index.html';
+      window.location.href = 'loginSuccess.html';
     }
   }else{
     loginFail.style.display = 'block';
