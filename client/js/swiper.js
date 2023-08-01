@@ -14,7 +14,6 @@
 // })
 
 export const swiper = new Swiper('.swiper1', {
-  // Optional parameters
   direction: 'horizontal',
   loop: true,
   autoplay: {
@@ -22,13 +21,11 @@ export const swiper = new Swiper('.swiper1', {
       disableOnInteraction: false,
   },
 
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next-main',
     prevEl: '.swiper-button-prev-main',
   },
 
-  // And if we need scrollbar
   scrollbar: {
     el: '.swiper-scrollbar',
   },
