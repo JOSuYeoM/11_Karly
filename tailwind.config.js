@@ -34,6 +34,9 @@ module.exports = {
       },
       backgroundImage: {
         'arrow-right': "url('/client/assets/icons/arrow2_1.svg')"
+      },
+      transformOrigin: {
+        'ul': 'translate3d(0, 0, 5)'
       }
     },
   },
