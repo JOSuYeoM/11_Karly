@@ -31,6 +31,9 @@ module.exports = {
       },
       fontFamily: {
         'pretendard': ['"Pretendard Variable", Pretendard'],
+      },
+      backgroundImage: {
+        'arrow-right': "url('/client/assets/icons/arrow2_1.svg')"
       }
     },
   },

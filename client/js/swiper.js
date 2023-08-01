@@ -13,24 +13,33 @@
 //   }
 // })
 
-export const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
+export const swiper = new Swiper('.swiper1', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+  },
 
-        // If we need pagination
-        pagination: {
-          el: '.swiper-pagination',
-        },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next-main',
+    prevEl: '.swiper-button-prev-main',
+  },
 
-        // Navigation arrows
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
 
-        // And if we need scrollbar
-        scrollbar: {
-          el: '.swiper-scrollbar',
-        },
-      });
+export const swiper2 = new Swiper('.swiper2', {
+  slidesPerView: '4',
+  spaceBetween: 20,
+  loop : true,
+  navigation: {
+      nextEl: '.swiper-button-next1',
+      prevEl: '.swiper-button-prev1',
+  },
+});
