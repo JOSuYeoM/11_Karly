@@ -22,13 +22,13 @@
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard-dynamic-subset.css" />
     <link rel="stylesheet" href="./css/main.css" />
-    <!-- <link
+    <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/main.js" type="module"></script>
+    <!-- <script src="./js/swiper.js" defer></script> -->
     <title>main page</title>
   </head>
 
@@ -490,30 +490,72 @@
         class="event group relative mx-auto h-[23.125rem] w-[120rem] justify-center"
       >
         <h2 class="sr-only">메인 이벤트</h2>
-        <a href="#">
-          <div>
-            <img
-              src="/assets/image/banner04.svg"
-              alt="컬리 이 주의 특가 한 눈에 보기"
-              class="event__image h-[23.125rem] w-[120rem]"
-            />
+        <div class="swiper relative">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#">
+                <img
+                  src="/assets/image/banner01.svg"
+                  alt="컬리 이 주의 특가 한 눈에 보기"
+                  class="event__image h-[23.125rem] w-[120rem]"
+                />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <img
+                  src="/assets/image/banner02.svg"
+                  alt="컬리 이 주의 특가 한 눈에 보기"
+                  class="event__image h-[23.125rem] w-[120rem]"
+                />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <div>
+                  <img
+                    src="/assets/image/banner03.svg"
+                    alt="컬리 이 주의 특가 한 눈에 보기"
+                    class="event__image h-[23.125rem] w-[120rem]"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <div>
+                  <img
+                    src="/assets/image/banner04.svg"
+                    alt="컬리 이 주의 특가 한 눈에 보기"
+                    class="event__image h-[23.125rem] w-[120rem]"
+                  />
+                </div>
+              </a>
+            </div>
           </div>
-        </a>
-
-        <button
-          type="button"
-          class="button__left absolute left-80 top-1/2 -translate-x-1/2 -translate-y-1/2 transform border-none bg-transparent opacity-0 transition-opacity duration-500 ease-in group-hover:opacity-100"
-          aria-label="왼쪽 이벤트 페이지로 이동"
-        >
-          <img src="./assets/icons/Arrow.svg" alt="왼쪽 이동 화살표" />
-        </button>
-        <button
-          type="button"
-          class="button__right absolute right-80 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-180 transform border-none opacity-0 transition-opacity duration-500 ease-in group-hover:opacity-100"
-          aria-label="오른쪽 이벤트 페이지로 이동"
-        >
-          <img src="./assets/icons/Arrow.svg" alt="오른쪽 이동 화살표" />
-        </button>
+          <div
+            class="swiper-button-prev bg-gray-300/50 p-10 rounded-full ml-28 absolute"
+          >
+            <!-- <button
+              type="button"
+              class="button__left absolute left-80 top-1/2 -translate-x-1/2 -translate-y-1/2 transform border-none bg-transparent opacity-0 transition-opacity duration-500 ease-in group-hover:opacity-100"
+              aria-label="왼쪽 이벤트 페이지로 이동"
+            >
+            <img src="./assets/icons/Arrow.svg" alt="왼쪽 이동 화살표" /> -->
+            <!-- </button> -->
+          </div>
+          <div
+            class="swiper-button-next bg-gray-300/50 p-10 rounded-full mr-28 absolute"
+          >
+            <!-- <button
+              type="button"
+              class="button__right absolute right-80 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-180 transform border-none opacity-0 transition-opacity duration-500 ease-in group-hover:opacity-100"
+              aria-label="오른쪽 이벤트 페이지로 이동"
+            >
+              <img src="./assets/icons/Arrow.svg" alt="오른쪽 이동 화살표" />
+            </button> -->
+          </div>
+        </div>
       </section>
       <!-- 상품1 섹션 -->
 
@@ -1263,5 +1305,28 @@
         </dialog>
       </div>
     </div>-->
+    <!-- <script>
+      const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      });
+    </script> -->
   </body>
 </html>
