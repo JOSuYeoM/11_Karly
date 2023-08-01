@@ -654,16 +654,16 @@ video {
   z-index: 10;
 }
 
+.z-40 {
+  z-index: 40;
+}
+
 .z-50 {
   z-index: 50;
 }
 
 .z-\[5\] {
   z-index: 5;
-}
-
-.z-40 {
-  z-index: 40;
 }
 
 .float-right {
