@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입 페이지</title>
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard-dynamic-subset.css"
+    />
+    <link
+      rel="icon"
+      href="https://res.kurly.com/kurly/logo/icon-192x192.png"
+      type="image/xml+svg"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/main.js" type="module"></script>
+    <script src="./js/login.js" type="module"></script>
+  </head>
+
+<body>
+  <header class="header w-xl mx-auto">
+    <ul class="header__group__memberOnly flex justify-end pt-4 gap-x-3">
+      <li class="group__memberOnlyLi text-xs">
+        <a
+          class="group__memberOnlyLi__link group__memberOnlyLi--active text-primary"
+          href="#"
+          >회원가입</a
+        >
+      </li>
+      <li class="group__memberOnlyLi text-xs">
+        <span class="group__memberOnlyLi__divider" aria-hidden="true">
+          ㅣ
+        </span>
+        <a href="login.html" class="group__memberOnlyLi__link ml-2">로그인</a>
+      </li>
+      <li class="group__memberOnlyLi text-xs flex">
+        <span class="group__memberOnlyLi__divider" aria-hidden="true">
+          ㅣ
+        </span>
+        <div class="memberOnly__help relative duration-200 group">
+          <a
+            href="#"
+            class="group__memberOnlyLi__link ml-2 flex items-center"
+          >
+            고객센터
+            <img
+              class="w-2 ml-1 inline-block"
+              src="./assets/icons/caret-down-solid.svg"
+              alt="고객센터"
+            />
+          </a>
+          <ul
+            class="memberOnly__help w-32 right-0 top-6 bg-white border flex flex-col gap-2 px-3 pr-12 py-3 text-content absolute group-hover:visible invisible duration-300 opacity-0 group-hover:opacity-100 z-10"
+          >
+            <li class="help__item">
+              <a href="#">공지사항</a>
+            </li>
+            <li class="help__item">
+              <a href="#">자주하는 질문</a>
+            </li>
+            <li class="help__item">
+              <a href="#">1:1 문의</a>
+            </li>
+            <li class="help__item">
+              <a href="#">대량주문 문의</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+
+    <div class="header__group flex justify-between">
+      <div class="header__group__tab pt-8 flex">
+        <h1 class="group__logo">
+          <img
+            class="group__logo_img pr-3"
+            src="./assets/icons/Logo.svg"
+            alt="마켓칼리 로고"
+          />
+        </h1>
+        <ul class="group__itemBox flex gap-x-3">
+          <li class="group__itemBox__item">
+            <a
+              class="itemBox__link text-21 text-primary font-semibold"
+              href="#"
+              >마켓칼리</a
+            >
+          </li>
+
+          <li class="group__itemBox__item">
+            <span
+              class="itemBox__item__divider text-21 text-gray-200 font-semibold mr-2"
+              aria-hidden="true"
+              >ㅣ</span
+            >
+            <a
+              href="#"
+              class="itemBox__link text-21 text-light-gray-text font-semibold hover:text-primary duration-300"
+              >뷰티칼리<sup class="orange text-orange-600"> N</sup></a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <form action="/" method="POST" class="header__group__searchForm pt-7">
+        <fieldset class="group__searchForm__fieldset">
+          <legend class="sr-only">검색 폼</legend>
+          <div class="searchForm__group">
+            <div class="searchForm__group__formInputBox relative">
+              <label for="search" class="sr-only">검색어</label>
+              <input
+                type="search"
+                id="search"
+                name="search"
+                required
+                class="group__input w-96 h-9 px-5 border rounded border-primary"
+                placeholder="검색어를 입력해주세요."
+              />
+              <button
+                type="submit"
+                class="searchForm__group__button absolute top-0 right-0 bg-transparent border-none p-0"
+              >
+                <img src="./assets/icons/Search.svg" alt="배송지 등록하기" />
+              </button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+
+      <ul class="header__group__myPage flex pt-7 gap-x-5">
+        <li class="group__myPageLi">
+          <a href="#">
+            <img src="./assets/icons/Location.svg" alt="배송지 등록하기" />
+          </a>
+        </li>
+
+        <li class="group__myPageLi">
+          <a href="#">
+            <img src="./assets/icons/Heart.svg" alt="찜하기" />
+          </a>
+        </li>
+
+        <li class="group__myPageLi">
+          <a href="#">
+            <img
+              src="./assets/icons/icon-cart.svg"
+              alt="장바구니로 이동하기"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- 공통 내비게이션 -->
+  <nav class="nav w-full py-4 border-b drop-shadow-md">
+    <h2 class="sr-only">주요 메뉴</h2>
+    <div
+      class="nav__container relative mx-auto flex w-xl flex-row items-center justify-between"
+    >
+      <div
+        class="nav__category hover flex flex-row hover:bg-gray-200 group duration-300"
+        aria-label="카테고리"
+      >
+        <img
+          class="nav__category__image cursor-pointer pl-2"
+          src="./assets/icons/Hamburger.svg"
+          alt="햄버거 버튼"
+        />
+        <span
+          class="nav__category__text ml-3 mr-3 py-3 cursor-pointer font-semibold"
+          >카테고리</span
+        >
+        <ul
+          class="nav__category__list z-10 absolute top-full w-60 border border-solid border-gray-300 bg-white group-hover:visible invisible duration-300 opacity-0 group-hover:opacity-100"
+        >
+          <li
+            class="category__item sprite sprite1 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+          >
+            <a href="#" class="category__link flex flex-row">
+              <div class="mr-2 h-6 w-6">
+                <img src="./assets/icons/navGift.png" alt="선물하기" />
+              </div>
+              선물하기
+            </a>
+          </li>
+          <li
+            class="category__item sprite sprite2 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+          >
+            <a href="#" class="category__link flex flex-row">
+              <div class="mr-2 h-6 w-6">
+                <img src="./assets/icons/navVegetable.png" alt="채소" />
+              </div>
+              채소
+            </a>
+          </li>
+          <li
+            class="category__item sprite sprite3 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+          >
+            <a href="#" class="category__link flex flex-row">
+              <div class="mr-2 h-6 w-6">
+                <img src="./assets/icons/navFruit.png" alt="과일 견과류 쌀" />
+              </div>
+              과일 · 견과 · 쌀
+            </a>
+          </li>
+          <li
+            class="category__item sprite sprite4 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+          >
+            <a href="#" class="category__link flex flex-row">
+              <div class="mr-2 h-6 w-6">
+                <img
+                  src="./assets/icons/navFish.png"
+                  alt="수산물 해산물 건어물"
+                />
+              </div>
+              수산 · 해산 · 건어물
+            </a>
+          </li>
+          <li
+            class="category__item sprite sprite5 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+          >
+            <a href="#" class="category__link flex flex-row">
+              <div class="mr-2 h-6 w-6">
+                <img src="./assets/icons/navMeat.png" alt="정육 계란" />
+              </div>
+              정육 · 계란
+            </a>
+          </li>
+          <li
+            class="category__item sprite sprite6 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+          >
+            <a href="#" class="category__link flex flex-row">
+              <div class="mr-2 h-6 w-6">
+                <img
+                  src="./assets/icons/navMaindish.png"
+                  alt="국 반찬 메인요리"
+                />
+              </div>
+              국 · 반찬 · 메인요리
+            </a>
+          </li>
+          <li
+            class="category__item sprite sprite7 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+          >
+            <a href="#" class="category__link flex flex-row">
+              <div class="mr-2 h-6 w-6">
+                <img src="./assets/icons/navSalad.png" alt="샐러드 간편식" />
+              </div>
+              샐러드 · 간편식
+            </a>
+          </li>
+          <li
+            class="category__item sprite sprite8 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+          >
+            <a href="#" class="category__link flex flex-row">
+              <div class="mr-2 h-6 w-6">
+                <img src="./assets/icons/navSpice.png" alt="면류 양념 오일" />
+              </div>
+              면 · 양념 · 오일
+            </a>
+          </li>
+          <li
+            class="category__item sprite sprite9 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+          >
+            <a href="#" class="category__link flex flex-row">
+              <div class="mr-2 h-6 w-6">
+                <img
+                  src="./assets/icons/navDrink.png"
+                  alt="생수 음료 우유 커피"
+                />
+              </div>
+              생수 · 음료 · 우유 · 커피
+            </a>
+          </li>
+          <li
+            class="category__item sprite sprite10 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+          >
+            <a href="#" class="category__link flex flex-row">
+              <div class="mr-2 h-6 w-6">
+                <img src="./assets/icons/navDessert.png" alt="간식 과자 떡" />
+              </div>
+              간식 · 과자 · 떡
+            </a>
+          </li>
+          <li
+            class="category__item sprite sprite11 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+          >
+            <a href="#" class="category__link flex flex-row">
+              <div class="mr-2 h-6 w-6">
+                <img
+                  src="./assets/icons/navBread.png"
+                  alt="베이커리 치즈 유제품"
+                />
+              </div>
+              베이커리 · 치즈 · 델리
+            </a>
+          </li>
+          <li
+            class="category__item sprite sprite12 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+          >
+            <a href="#" class="category__link flex flex-row">
+              <div class="mr-2 h-6 w-6">
+                <img src="./assets/icons/navHealth.png" alt="건강식품" />
+              </div>
+              건강식품
+            </a>
+          </li>
+          <li
+            class="category__item sprite sprite13 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+          >
+            <a href="#" class="category__link flex flex-row">
+              <div class="mr-2 h-6 w-6">
+                <img src="./assets/icons/navWine.png" alt="와인" />
+              </div>
+              와인
+            </a>
+          </li>
+          <li
+            class="category__item sprite sprite14 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+          >
+            <a href="#" class="category__link flex flex-row">
+              <div class="mr-2 h-6 w-6">
+                <img
+                  src="./assets/icons/navTraditionalDrink.png"
+                  alt="전통주"
+                />
+              </div>
+              전통주
+            </a>
+          </li>
+          <li
+            class="category__item sprite sprite15 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+          >
+            <a href="#" class="category__link flex flex-row">
+              <div class="mr-2 h-6 w-6">
+                <img
+                  src="./assets/icons/navLiving.png"
+                  alt="생활용품 리빙 캠핑"
+                />
+              </div>
+              생활용품 · 리빙 · 캠핑
+            </a>
+          </li>
+          <li
+            class="category__item sprite sprite16 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+          >
+            <a href="#" class="category__link flex flex-row">
+              <div class="mr-2 h-6 w-6">
+                <img
+                  src="./assets/icons/navBeauty.png"
+                  alt="스킨케어 메이크업"
+                />
+              </div>
+              스킨케어 · 메이크업
+            </a>
+          </li>
+          <li
+            class="category__item sprite sprite17 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+          >
+            <a href="#" class="category__link flex flex-row">
+              <div class="mr-2 h-6 w-6">
+                <img
+                  src="./assets/icons/navBody.png"
+                  alt="헤어 바디 구강용품"
+                />
+              </div>
+              헤어 · 바디 · 구강
+            </a>
+          </li>
+          <li
+            class="category__item sprite sprite18 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+          >
+            <a href="#" class="category__link flex flex-row">
+              <div class="mr-2 h-6 w-6">
+                <img src="./assets/icons/navKitchen.png" alt="주방용품" />
+              </div>
+              주방용품
+            </a>
+          </li>
+          <li
+            class="category__item sprite sprite19 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+          >
+            <a href="#" class="category__link flex flex-row">
+              <div class="mr-2 h-6 w-6">
+                <img
+                  src="./assets/icons/navHomeAppliances.png"
+                  alt="가전제품"
+                />
+              </div>
+              가전제품
+            </a>
+          </li>
+          <li
+            class="category__item sprite sprite20 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+          >
+            <a href="#" class="category__link flex flex-row">
+              <div class="mr-2 h-6 w-6">
+                <img src="./assets/icons/navPet.png" alt="반려동물용품" />
+              </div>
+              반려동물
+            </a>
+          </li>
+          <li
+            class="category__item sprite sprite21 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+          >
+            <a href="#" class="category__link flex flex-row">
+              <div class="mr-2 h-6 w-6">
+                <img
+                  src="./assets/icons/navBaby.png"
+                  alt="베이비 키즈 완구"
+                />
+              </div>
+              베이비 · 키즈 · 완구
+            </a>
+          </li>
+          <li
+            class="category__item sprite sprite22 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+          >
+            <a href="#" class="category__link flex flex-row">
+              <div class="mr-2 h-6 w-6">
+                <img src="./assets/icons/navTrip.png" alt="여행 티켓" />
+              </div>
+              여행 · 티켓
+            </a>
+          </li>
+        </ul>
+      </div>
+      <ul
+        class="nav__collection__list flex w-1/2 flex-row justify-between py-2 text-base font-semibold"
+      >
+        <li
+          class="collection__item w-1/4 text-center hover:text-primary hover:underline underline-offset-2"
+        >
+          <a href="#" class="collection__link">신상품</a>
+        </li>
+        <li
+          class="collection__item w-1/4 text-center hover:text-primary hover:underline underline-offset-2"
+        >
+          <a href="#" class="collection__link">베스트</a>
+        </li>
+        <li
+          class="collection__item w-1/4 text-center hover:text-primary hover:underline underline-offset-2"
+        >
+          <a href="#" class="collection__link">알뜰쇼핑</a>
+        </li>
+        <li
+          class="collection__item w-1/4 text-center hover:text-primary hover:underline underline-offset-2"
+        >
+          <a href="#" class="collection__link">특가/혜택</a>
+        </li>
+      </ul>
+      <div
+        class="nav__info borderr float-right rounded-full border border-solid border-gray-300 px-2 py-1 text-xs"
+      >
+        <a href="#" class="nav__info__link"
+          ><span class="primary text-primary">샛별·택배</span> 배송안내</a
+        >
+      </div>
+    </div>
+  </nav>
+
+
+<!-- 회원가입 페이지 조수연 -->
+  <div class="w-xl mx-auto px-20">
+    <h2 class="pt-20 pb-6 text-21 font-semibold text-center">회원가입</h2>
+  <div class="text-right border-b-2 border-gray-300" aria-hidden="true">
+    <span class="text-sm font-semibold"><sup class="text-orange-700">* </sup>필수입력사항</span>
+  </div>
+
+  <form action="#" method="post" name="join">
+    <fieldset class="joinInfo">
+
+      <!-- 아이디 -->
+      <div class="py-5 bg-amber-200">
+        <label class="text-base font-semibold bg-lime-400">아이디<sup class="text-orange-700" aria-hidden="true"> *</sup></label>
+        <input type="text" id="user-id" name="user-id" class="border border-gray-300 rounded w-80 h-11" placeholder="아이디를 입력해주세요"
+          required />
+        <input type="button" class="text-primary font-semibold border border-primary rounded w-36 h-11" value="중복확인" onclick="" />
+      </div>
+
+      <!-- 비밀번호 -->
+      <div class="py-5">
+        <label class="text-base font-semibold">비밀번호<sup class="text-orange-700" aria-hidden="true" aria-label="필수입력사항"> *</sup></label>
+        <input type="text" id="password" name="password" class="border border-gray-300 rounded w-80 h-11" placeholder="비밀번호를 입력해주세요" required />
+      </div>
+
+      <!-- 비밀번호 확인 -->
+      <div class="py-5">
+        <label class="text-base font-semibold">비밀번호 확인<sup class="text-orange-700" aria-hidden="true" aria-label="필수입력사항"> *</sup></label>
+        <input type="text" id="password-confirm" name="password-confirm" class="border border-gray-300 rounded w-80 h-11" placeholder="비밀번호를 입력해주세요" required
+          class="input-box" />
+      </div>
+
+      <!-- 이메일 -->
+      <div class="py-5">
+        <label class="text-base font-semibold">이메일<sup class="text-orange-700"
+                aria-hidden="true" aria-label="필수입력사항"> *</sup></label>
+        <input type="email" id="email" name="email" placeholder="예&#41; marketkarly@karly.com" class="border border-gray-300 rounded w-80 h-11" required />
+        <input type="button" class="text-primary font-semibold border border-primary rounded w-36 h-11" value="중복확인" onclick="" />
+      </div>
+
+      <!-- 휴대폰 번호 -->
+      <div class="py-5">
+        <label class="text-base font-semibold">휴대폰<sup class="text-orange-700"
+                aria-hidden="true" aria-label="필수입력사항"> *</sup></label>
+        <input type="text" id="phone-number" name="phone-number" placeholder="숫자만 입력해주세요" class="border border-gray-300 rounded w-80 h-11" required  />
+        <input type="button" class="text-primary font-semibold border border-primary rounded w-36 h-11" value="인증번호 받기" onclick="" />
+      </div>
+
+      <!-- 주소 -->
+      <div class="py-5">
+        <div class="address__search">
+          <label class="text-base font-semibold">주소<sup class="text-orange-700
+            aria-hidden="true" aria-label="필수입력사항"> *</sup></label>
+          <input type="button" value="주소 검색" class="text-primary font-semibold border border-primary rounded w-80 h-11" onclick="" id="address" />
+          <span class="text-xs">배송지에 따라 상품 정보가 달라질 수 있습니다.</span>
+        </div>
+      </div>
+
+      <!-- 생년월일 -->
+      <div class="py-5">
+        <label class="text-base font-semibold">생년월일</label>
+        <input type="text" id="bod" name="bod" placeholder="YYYY / MM / DD" pattern="" maxlength="8" class="border border-gray-300 rounded w-80 h-11 text-center" />
+      </div>
+
+    <fieldset>
+      <!-- 이용약관 동의-->
+      <div class="py-5 border-t-2 border-gray-300" aria-hidden="true"">
+        <div class="text-base font-semibold">
+          이용약관동의<sup sup class="text-orange-700
+                aria-hidden=" true" aria-label="필수선택사항">*</sup>
+        </div>
+        <div>
+          <div class="agree-list1">
+            <div class="agree-all__text button-text">
+              <input type="checkbox" name="agree" id="agree-all" class="agree-button" />
+              <label for="agree-all">전체 동의합니다.</label>
+            </div>
+            <span class="text-sm text-gray-400">선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를
+              이용할 수 있습니다.</span>
+          </div>
+          <div class="agree-list2">
+            <div class="button-text">
+              <input type="checkbox" name="agree" id="agree1" required class="agree-button" />
+              <label for="agree1">이용약관 동의 (필수)</label>
+            </div>
+            <a href="#" class="text-primary text-sm">
+              약관보기
+            </a>
+          </div>
+
+          <div class="agree-list2">
+            <div class="button-text">
+              <input type="checkbox" name="agree" id="agree2" required class="agree-button" />
+              <label for="agree2">개인정보 수집·이용 동의 (필수)</label>
+            </div>
+            <a href="#" class="text-primary text-sm">
+              약관보기
+            </a>
+          </div>
+          <div class="agree-list2">
+            <div class="button-text">
+              <input type="checkbox" name="agree" id="agree3" class="agree-button" />
+              <label for="agree3" class="agree3-text">무료배송, 할인쿠폰 등 혜택/정보 수신 동의 (선택)</label>
+            </div>
+            <a href="#" class="text-primary text-sm">
+              약관보기
+            </a>
+          </div>
+          <div class="agree-list2">
+            <div class="button-text">
+              <input type="checkbox" name="agree" id="agree4" required class="agree-button" />
+              <label for="agree4">본인은 만 14세 이상입니다. (필수)</label>
+            </div>
+            <a href="#" class="text-primary text-sm">
+              약관보기
+            </a>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- 가입하기 버튼 -->
+    <div class="">
+      <input type="submit" value="가입하기" class="font-normal border border-primary w-80 h-11
+      bg-primary text-white" />
+    </div>
+      </form>
+    </div>
+</html>
