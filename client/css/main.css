@@ -662,8 +662,8 @@ video {
   z-index: 5;
 }
 
-.z-0 {
-  z-index: 0;
+.z-40 {
+  z-index: 40;
 }
 
 .float-right {
@@ -919,6 +919,10 @@ video {
 
 .max-w-5xl {
   max-width: 64rem;
+}
+
+.origin-ul {
+  transform-origin: translate3d(0, 0, 5);
 }
 
 .-translate-x-1\/2 {
