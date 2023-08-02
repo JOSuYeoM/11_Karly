@@ -1,5 +1,5 @@
 import { swiper } from './swiper.js';
-import { getNode, getNodes, insertFirst, css,insertLast } from '../lib/index.js'
+import { getNode, getNodes, insertFirst } from '../lib/index.js'
 
 
 // DOM 페이지 로드 시 Swiper 및 로컬 스토리지에서 항목 로드를 처리합니다.
@@ -36,8 +36,8 @@ function getSelectedItemsFromLocalStorage() {
 }
 
 function insertItems(item) {
-  const slideContainer = document.querySelector(".side__ul");
-  const slide = document.createElement("div");
+  const slideContainer = getNode(".side__ul");
+  const slide = getNode("div");
   slide.classList.add("swiper-slide");
   slide.innerHTML = `
     <li class>
