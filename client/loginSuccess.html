@@ -24,13 +24,13 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard-dynamic-subset.css"
     />
     <link rel="stylesheet" href="./css/main.css" />
-    <!-- <link
+    <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/main.js" type="module"></script>
+    <!-- <script src="./js/swiper.js" defer></script> -->
     <title>main page</title>
   </head>
 
@@ -177,7 +177,7 @@
     </header>
 
     <!-- 공통 내비게이션 -->
-    <nav class="nav w-full py-4 border-b drop-shadow-md">
+    <nav class="nav w-full py-4 border-b drop-shadow-md z-40 relative">
       <h2 class="sr-only">주요 메뉴</h2>
       <div
         class="nav__container relative mx-auto flex w-xl flex-row items-center justify-between"
@@ -196,10 +196,10 @@
             >카테고리</span
           >
           <ul
-            class="nav__category__list z-10 absolute top-full w-60 border border-solid border-gray-300 bg-white group-hover:visible invisible duration-300 opacity-0 group-hover:opacity-100"
+            class="nav__category__list z-50 absolute top-full w-60 border border-solid border-gray-300 bg-white group-hover:visible invisible duration-300 opacity-0 group-hover:opacity-100"
           >
             <li
-              class="category__item sprite sprite1 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary"
+              class="category__item sprite sprite1 p-3 hover:bg-primary/50 hover:font-semibold hover:text-primary z-50"
             >
               <a href="#" class="category__link flex flex-row">
                 <div class="mr-2 h-6 w-6">
@@ -486,34 +486,60 @@
 
     <!-- 메인 이벤트 섹션 -->
     <main>
-      <section
-        class="event group relative mx-auto h-[23.125rem] w-[120rem] justify-center"
-      >
+      <section class="event group relative mx-auto justify-center">
         <h2 class="sr-only">메인 이벤트</h2>
-        <a href="#">
-          <div>
-            <img
-              src="/assets/image/banner04.svg"
-              alt="컬리 이 주의 특가 한 눈에 보기"
-              class="event__image h-[23.125rem] w-[120rem]"
-            />
+        <div class="swiper swiper1 relative">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#">
+                <img
+                  src="/assets/image/banner01.svg"
+                  alt="컬리 이 주의 특가 한 눈에 보기"
+                  class="event__image w-[120rem]"
+                />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <img
+                  src="/assets/image/banner02.svg"
+                  alt="컬리 이 주의 특가 한 눈에 보기"
+                  class="event__image w-[120rem]"
+                />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <div>
+                  <img
+                    src="/assets/image/banner03.svg"
+                    alt="컬리 이 주의 특가 한 눈에 보기"
+                    class="event__image w-[120rem]"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <div>
+                  <img
+                    src="/assets/image/banner04.svg"
+                    alt="컬리 이 주의 특가 한 눈에 보기"
+                    class="event__image w-[120rem]"
+                  />
+                </div>
+              </a>
+            </div>
           </div>
-        </a>
-
-        <button
-          type="button"
-          class="button__left absolute left-80 top-1/2 -translate-x-1/2 -translate-y-1/2 transform border-none bg-transparent opacity-0 transition-opacity duration-500 ease-in group-hover:opacity-100"
-          aria-label="왼쪽 이벤트 페이지로 이동"
-        >
-          <img src="./assets/icons/Arrow.svg" alt="왼쪽 이동 화살표" />
-        </button>
-        <button
-          type="button"
-          class="button__right absolute right-80 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-180 transform border-none opacity-0 transition-opacity duration-500 ease-in group-hover:opacity-100"
-          aria-label="오른쪽 이벤트 페이지로 이동"
-        >
-          <img src="./assets/icons/Arrow.svg" alt="오른쪽 이동 화살표" />
-        </button>
+          <div class="swiper-button-prev-main z-10 top-1/2 absolute left-[18%]">
+            <img src="./assets/icons/Arrow.svg" alt="왼쪽 이동 화살표" />
+          </div>
+          <div
+            class="swiper-button-next-main z-10 top-1/2 absolute right-[18%] rotate-180"
+          >
+            <img src="./assets/icons/Arrow.svg" alt="오른쪽 이동 화살표" />
+          </div>
+        </div>
       </section>
       <!-- 상품1 섹션 -->
 
@@ -525,149 +551,173 @@
         </h2>
 
         <!-- 상품1 목록 -->
-        <div class="flex mx-auto w-xl space-x-4 justify-center">
-          <!-- 첫번째 요소 -->
-          <ul class="goods__list relative">
-            <li class="goods__item">
-              <a
-                href="#"
-                class="goods__link"
-                title="[풀무원] 탱탱쫄면 (4개입) 상세페이지"
-              >
-                <div>
-                  <img
-                    src="./assets/image/goods1.svg"
-                    alt="[풀무원] 탱탱쫄면 (4개입)"
-                    aria-hidden="true"
-                  />
-                </div>
-                <p class="goods__name text-base font-normal top-4 pt-4 pb-2">
-                  [풀무원] 탱탱쫄면 (4개입)
-                </p>
-                <p class="goods__regPrice text-21 font-semibold no-underline">
-                  4,980 원
-                </p>
-              </a>
-              <button
-                type="button"
-                class="button__cart absolute bottom-28 right-3"
-                aria-label="장바구니로 이동"
-              >
-                <img src="./assets/icons/Cart.svg" alt="." aria-hidden="true" />
-              </button>
-            </li>
-          </ul>
-
-          <!-- 두번째 요소 -->
-          <ul class="goods__list relative">
-            <li class="goods__item">
-              <a
-                href="#"
-                class="goods__link"
-                title="[온더바디] 죠르디 시카 자석 선쿠션 상세페이지"
-              >
-                <div>
-                  <img
-                    src="./assets/image/goods2.svg"
-                    alt="[온더바디] 죠르디 시카 자석 선쿠션"
-                    aria-hidden="true"
-                  />
-                </div>
-                <p class="goods__name text-base font-normal top-4 pt-4 pb-2">
-                  [온더바디] 죠르디 시카 자석 선쿠션
-                </p>
-                <p class="goods__regPrice text-21 font-semibold no-underline">
-                  32,500 원
-                </p>
-              </a>
-              <button
-                type="button"
-                class="button__cart absolute bottom-28 right-3"
-                aria-label="장바구니로 이동"
-              >
-                <img src="./assets/icons/Cart.svg" alt="." aria-hidden="true" />
-              </button>
-            </li>
-          </ul>
-
-          <!-- 세번째 요소 -->
-          <ul class="goods__list relative">
-            <li class="goods__item">
-              <a
-                href="#"
-                class="goods__link"
-                title="유기농 밀키퀸 현미 4kg 상세페이지"
-              >
-                <div>
-                  <img
-                    src="./assets/image/goods3.svg"
-                    alt="유기농 밀키퀸 현미"
-                    aria-hidden="true"
-                  />
-                </div>
-                <p class="goods__name text-base font-normal top-4 pt-4 pb-2">
-                  유기농 밀키퀸 현미
-                </p>
-                <p class="goods__regPrice text-21 font-semibold no-underline">
-                  25,000 원
-                </p>
-              </a>
-              <button
-                type="button"
-                class="button__cart absolute bottom-28 right-3"
-                aria-label="장바구니로 이동"
-              >
-                <img src="./assets/icons/Cart.svg" alt="." aria-hidden="true" />
-              </button>
-            </li>
-          </ul>
-
-          <!-- 네번째 요소 -->
-          <ul class="goods__list relative">
-            <li class="goods__item">
-              <a
-                href="#"
-                class="goods__link"
-                title="[프로쉬] 베이비 세탁세 상세페이지"
-              >
-                <div>
-                  <img
-                    src="./assets/image/goods4.svg"
-                    alt="상품 이미지"
-                    aria-hidden="true"
-                  />
-                </div>
-                <p class="goods__name text-base font-normal top-4 pt-4 pb-2">
-                  [프로쉬] 베이비 세탁세
-                </p>
-                <p
-                  class="goods__discount text-21 font-semibold text-accent-yellow"
+        <div
+          class="swiper swiper2 mx-auto w-xl space-x-4 justify-center relative"
+        >
+          <div class="swiper-wrapper flex">
+            <!-- 첫번째 요소 -->
+            <ul class="swiper-slide goods__list relative">
+              <li class="goods__item">
+                <a
+                  href="#"
+                  class="goods__link"
+                  title="[풀무원] 탱탱쫄면 (4개입) 상세페이지"
                 >
-                  24%<b
-                    class="goods__regPrice text-21 text-black font-semibold no-underline"
-                    >18,900원</b
-                  >
-                </p>
-                <p class="goods__regPrice"><del>24,000 원</del></p>
-              </a>
-              <button
-                type="button"
-                class="button__cart absolute bottom-28 right-3"
-                aria-label="장바구니로 이동"
-              >
-                <img src="./assets/icons/Cart.svg" alt="." aria-hidden="true" />
-              </button>
-            </li>
-          </ul>
-        </div>
+                  <div>
+                    <img
+                      src="./assets/image/goods1.svg"
+                      alt="[풀무원] 탱탱쫄면 (4개입)"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <p class="goods__name text-base font-normal top-4 pt-4 pb-2">
+                    [풀무원] 탱탱쫄면 (4개입)
+                  </p>
+                  <p class="goods__regPrice text-21 font-semibold no-underline">
+                    4,980 원
+                  </p>
+                </a>
+                <button
+                  type="button"
+                  class="button__cart absolute bottom-[5.5rem] right-3"
+                  aria-label="장바구니로 이동"
+                >
+                  <img
+                    src="./assets/icons/Cart.svg"
+                    alt="."
+                    aria-hidden="true"
+                  />
+                </button>
+              </li>
+            </ul>
 
-        <!-- 슬라이드 버튼 -->
-        <button
-          type="button"
-          class="button__next"
-          aria-label="다음 상품 보여주기"
-        ></button>
+            <!-- 두번째 요소 -->
+            <ul class="swiper-slide goods__list relative">
+              <li class="goods__item">
+                <a
+                  href="#"
+                  class="goods__link"
+                  title="[온더바디] 죠르디 시카 자석 선쿠션 상세페이지"
+                >
+                  <div>
+                    <img
+                      src="./assets/image/goods2.svg"
+                      alt="[온더바디] 죠르디 시카 자석 선쿠션"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <p class="goods__name text-base font-normal top-4 pt-4 pb-2">
+                    [온더바디] 죠르디 시카 자석 선쿠션
+                  </p>
+                  <p class="goods__regPrice text-21 font-semibold no-underline">
+                    32,500 원
+                  </p>
+                </a>
+                <button
+                  type="button"
+                  class="button__cart absolute bottom-[5.5rem] right-3"
+                  aria-label="장바구니로 이동"
+                >
+                  <img
+                    src="./assets/icons/Cart.svg"
+                    alt="."
+                    aria-hidden="true"
+                  />
+                </button>
+              </li>
+            </ul>
+
+            <!-- 세번째 요소 -->
+            <ul class="swiper-slide goods__list relative">
+              <li class="goods__item">
+                <a
+                  href="#"
+                  class="goods__link"
+                  title="유기농 밀키퀸 현미 4kg 상세페이지"
+                >
+                  <div>
+                    <img
+                      src="./assets/image/goods3.svg"
+                      alt="유기농 밀키퀸 현미"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <p class="goods__name text-base font-normal top-4 pt-4 pb-2">
+                    유기농 밀키퀸 현미
+                  </p>
+                  <p class="goods__regPrice text-21 font-semibold no-underline">
+                    25,000 원
+                  </p>
+                </a>
+                <button
+                  type="button"
+                  class="button__cart absolute bottom-[5.5rem] right-3"
+                  aria-label="장바구니로 이동"
+                >
+                  <img
+                    src="./assets/icons/Cart.svg"
+                    alt="."
+                    aria-hidden="true"
+                  />
+                </button>
+              </li>
+            </ul>
+
+            <!-- 네번째 요소 -->
+            <ul class="swiper-slide goods__list relative">
+              <li class="goods__item">
+                <a
+                  href="#"
+                  class="goods__link"
+                  title="[프로쉬] 베이비 세탁세제 상세페이지"
+                >
+                  <div>
+                    <img
+                      src="./assets/image/goods4.svg"
+                      alt="[프로쉬] 베이비 세탁세제"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <p class="goods__name text-base font-normal top-4 pt-4 pb-2">
+                    [프로쉬] 베이비 세탁세제
+                  </p>
+                  <p
+                    class="goods__discount text-21 font-semibold text-accent-yellow"
+                  >
+                    24%<b
+                      class="goods__regPrice text-21 text-black font-semibold no-underline"
+                      >18,900원</b
+                    >
+                  </p>
+                  <p class="goods__regPrice"><del>24,000 원</del></p>
+                </a>
+                <button
+                  type="button"
+                  class="button__cart absolute bottom-28 right-3"
+                  aria-label="장바구니로 이동"
+                >
+                  <img
+                    src="./assets/icons/Cart.svg"
+                    alt="."
+                    aria-hidden="true"
+                  />
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="swiper-button-prev1 -left-2 absolute w-10 h-10 top-[153px] z-10 rotate-180"
+          >
+            <img src="./assets/icons/arrow2_1.svg" alt="왼쪽 캐러셀" />
+          </div>
+          <div
+            class="swiper-button-next1 right-2 absolute w-10 h-10 top-[153px] z-10"
+          >
+            <img src="./assets/icons/arrow2_1.svg" alt="오른쪽 캐러셀" />
+          </div>
+        </div>
       </section>
+
       <!-- 배너 -->
       <section class="banner mx-auto flex w-xl justify-center">
         <h2 class="sr-only">10월 주간 이벤트</h2>
@@ -685,140 +735,170 @@
           놓치면 후회할 가격
         </h2>
         <!-- 상품2 목록 -->
-        <div class="flex mx-auto w-xl space-x-4 justify-center">
-          <!-- 첫번째 요소 -->
-          <ul class="goods__list relative">
-            <li class="goods__item">
-              <a
-                href="#"
-                class="goods__link"
-                title="[풀무원] 탱탱쫄면 (4개입) 상세페이지"
-              >
-                <div>
-                  <img
-                    src="./assets/image/goods1.svg"
-                    alt="[풀무원] 탱탱쫄면 (4개입)"
-                    aria-hidden="true"
-                  />
-                </div>
-                <p class="goods__name text-base font-normal top-4 pt-4 pb-2">
-                  [풀무원] 탱탱쫄면 (4개입)
-                </p>
-                <p class="goods__regPrice text-21 font-semibold no-underline">
-                  4,980 원
-                </p>
-              </a>
-              <button
-                type="button"
-                class="button__cart absolute bottom-28 right-3"
-                aria-label="장바구니로 이동"
-              >
-                <img src="./assets/icons/Cart.svg" alt="." aria-hidden="true" />
-              </button>
-            </li>
-          </ul>
-
-          <!-- 두번째 요소 -->
-          <ul class="goods__list relative">
-            <li class="goods__item">
-              <a
-                href="#"
-                class="goods__link"
-                title="[온더바디] 죠르디 시카 자석 선쿠션 상세페이지"
-              >
-                <div>
-                  <img
-                    src="./assets/image/goods2.svg"
-                    alt="[온더바디] 죠르디 시카 자석 선쿠션"
-                    aria-hidden="true"
-                  />
-                </div>
-                <p class="goods__name text-base font-normal top-4 pt-4 pb-2">
-                  [온더바디] 죠르디 시카 자석 선쿠션
-                </p>
-                <p class="goods__regPrice text-21 font-semibold no-underline">
-                  32,500 원
-                </p>
-              </a>
-              <button
-                type="button"
-                class="button__cart absolute bottom-28 right-3"
-                aria-label="장바구니로 이동"
-              >
-                <img src="./assets/icons/Cart.svg" alt="." aria-hidden="true" />
-              </button>
-            </li>
-          </ul>
-
-          <!-- 세번째 요소 -->
-          <ul class="goods__list relative">
-            <li class="goods__item">
-              <a
-                href="#"
-                class="goods__link"
-                title="유기농 밀키퀸 현미 4kg 상세페이지"
-              >
-                <div>
-                  <img
-                    src="./assets/image/goods3.svg"
-                    alt="유기농 밀키퀸 현미"
-                    aria-hidden="true"
-                  />
-                </div>
-                <p class="goods__name text-base font-normal top-4 pt-4 pb-2">
-                  유기농 밀키퀸 현미
-                </p>
-                <p class="goods__regPrice text-21 font-semibold no-underline">
-                  25,000 원
-                </p>
-              </a>
-              <button
-                type="button"
-                class="button__cart absolute bottom-28 right-3"
-                aria-label="장바구니로 이동"
-              >
-                <img src="./assets/icons/Cart.svg" alt="." aria-hidden="true" />
-              </button>
-            </li>
-          </ul>
-
-          <!-- 네번째 요소 -->
-          <ul class="goods__list relative">
-            <li class="goods__item">
-              <a
-                href="#"
-                class="goods__link"
-                title="[프로쉬] 베이비 세탁세 상세페이지"
-              >
-                <div>
-                  <img
-                    src="./assets/image/goods4.svg"
-                    alt="상품 이미지"
-                    aria-hidden="true"
-                  />
-                </div>
-                <p class="goods__name text-base font-normal top-4 pt-4 pb-2">
-                  [프로쉬] 베이비 세탁세
-                </p>
-                <p
-                  class="goods__discount text-21 font-semibold text-accent-yellow"
+        <div
+          class="swiper swiper2 mx-auto w-xl space-x-4 justify-center relative mb-10"
+        >
+          <div class="swiper-wrapper flex">
+            <!-- 첫번째 요소 -->
+            <ul class="swiper-slide goods__list relative">
+              <li class="goods__item">
+                <a
+                  href="#"
+                  class="goods__link"
+                  title="[풀무원] 탱탱쫄면 (4개입) 상세페이지"
                 >
-                  24%<b
-                    class="goods__regPrice text-21 text-black font-semibold no-underline"
-                    >18,900원</b
+                  <div>
+                    <img
+                      src="./assets/image/goods1.svg"
+                      alt="[풀무원] 탱탱쫄면 (4개입)"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <p class="goods__name text-base font-normal top-4 pt-4 pb-2">
+                    [풀무원] 탱탱쫄면 (4개입)
+                  </p>
+                  <p class="goods__regPrice text-21 font-semibold no-underline">
+                    4,980 원
+                  </p>
+                </a>
+                <button
+                  type="button"
+                  class="button__cart absolute bottom-[5.5rem] right-3"
+                  aria-label="장바구니로 이동"
+                >
+                  <img
+                    src="./assets/icons/Cart.svg"
+                    alt="."
+                    aria-hidden="true"
+                  />
+                </button>
+              </li>
+            </ul>
+
+            <!-- 두번째 요소 -->
+            <ul class="swiper-slide goods__list relative">
+              <li class="goods__item">
+                <a
+                  href="#"
+                  class="goods__link"
+                  title="[온더바디] 죠르디 시카 자석 선쿠션 상세페이지"
+                >
+                  <div>
+                    <img
+                      src="./assets/image/goods2.svg"
+                      alt="[온더바디] 죠르디 시카 자석 선쿠션"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <p class="goods__name text-base font-normal top-4 pt-4 pb-2">
+                    [온더바디] 죠르디 시카 자석 선쿠션
+                  </p>
+                  <p class="goods__regPrice text-21 font-semibold no-underline">
+                    32,500 원
+                  </p>
+                </a>
+                <button
+                  type="button"
+                  class="button__cart absolute bottom-[5.5rem] right-3"
+                  aria-label="장바구니로 이동"
+                >
+                  <img
+                    src="./assets/icons/Cart.svg"
+                    alt="."
+                    aria-hidden="true"
+                  />
+                </button>
+              </li>
+            </ul>
+
+            <!-- 세번째 요소 -->
+            <ul class="swiper-slide goods__list relative">
+              <li class="goods__item">
+                <a
+                  href="#"
+                  class="goods__link"
+                  title="유기농 밀키퀸 현미 4kg 상세페이지"
+                >
+                  <div>
+                    <img
+                      src="./assets/image/goods3.svg"
+                      alt="유기농 밀키퀸 현미"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <p class="goods__name text-base font-normal top-4 pt-4 pb-2">
+                    유기농 밀키퀸 현미
+                  </p>
+                  <p class="goods__regPrice text-21 font-semibold no-underline">
+                    25,000 원
+                  </p>
+                </a>
+                <button
+                  type="button"
+                  class="button__cart absolute bottom-[5.5rem] right-3"
+                  aria-label="장바구니로 이동"
+                >
+                  <img
+                    src="./assets/icons/Cart.svg"
+                    alt="."
+                    aria-hidden="true"
+                  />
+                </button>
+              </li>
+            </ul>
+
+            <!-- 네번째 요소 -->
+            <ul class="swiper-slide goods__list relative">
+              <li class="goods__item">
+                <a
+                  href="#"
+                  class="goods__link"
+                  title="[프로쉬] 베이비 세탁세 상세페이지"
+                >
+                  <div>
+                    <img
+                      src="./assets/image/goods4.svg"
+                      alt="상품 이미지"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <p class="goods__name text-base font-normal top-4 pt-4 pb-2">
+                    [프로쉬] 베이비 세탁세
+                  </p>
+                  <p
+                    class="goods__discount text-21 font-semibold text-accent-yellow"
                   >
-                </p>
-                <p class="goods__regPrice"><del>24,000 원</del></p>
-              </a>
-              <button
-                type="button"
-                class="button__cart absolute bottom-28 right-3"
-                aria-label="장바구니로 이동"
-              >
-                <img src="./assets/icons/Cart.svg" alt="." aria-hidden="true" />
-              </button>
-            </li>
-          </ul>
+                    24%<b
+                      class="goods__regPrice text-21 text-black font-semibold no-underline"
+                      >18,900원</b
+                    >
+                  </p>
+                  <p class="goods__regPrice"><del>24,000 원</del></p>
+                </a>
+                <button
+                  type="button"
+                  class="button__cart absolute bottom-28 right-3"
+                  aria-label="장바구니로 이동"
+                >
+                  <img
+                    src="./assets/icons/Cart.svg"
+                    alt="."
+                    aria-hidden="true"
+                  />
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="swiper-button-prev1 -left-2 absolute w-10 h-10 top-[153px] z-10 rotate-180"
+          >
+            <img src="./assets/icons/arrow2_1.svg" alt="왼쪽 캐러셀" />
+          </div>
+          <div
+            class="swiper-button-next1 right-2 absolute w-10 h-10 top-[153px] z-10"
+          >
+            <img src="./assets/icons/arrow2_1.svg" alt="오른쪽 캐러셀" />
+          </div>
         </div>
 
         <!-- 슬라이드 버튼 -->
@@ -829,60 +909,32 @@
         ></button>
       </section>
       <!-- 사이드바 -->
-      <aside class="side relative" role="complementary">
-        <h2 class="sr-only">최근 본 상품</h2>
+
+      <aside class="side fixed z-30 top-1/3 right-8 w-24" role="complementary">
         <div
-          class="side__container fixed right-[2.44rem] top-[30%] flex h-[13.9375rem] w-20 flex-col items-center border border-solid border-[#c4c4c4] bg-white p-2"
+          class="side__container w-full flex max-h-[350px] flex-col items-center border border-solid border-[#c4c4c4] bg-white p-2"
         >
-          <button
-            type="button"
-            class="button__top h-[1.125rem] w-[1.125rem] border-[none] bg-transparent p-0"
-          >
-            <img src="./assets/icons/Direction=Up.svg" alt="위쪽 이동 화살표" />
-          </button>
-          <span
+          <h3
             class="sidebar__title m-2 h-[1.125rem] w-[4.5rem] text-center text-xs font-semibold leading-[150%] text-[black]"
           >
             최근 본 상품
-          </span>
-          <ul class="side__ul list-none overflow-hidden">
-            <li>
-              <a href="#">
-                <img
-                  src="./assets/image/goods1.svg"
-                  alt="풀무원 탱탱쫄면(4개입)"
-                  class="li_image h-[3.21285rem] w-10"
-                />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img
-                  src="./assets/image/goods4.svg"
-                  alt="프로쉬 베이비 세탁세제"
-                  class="li_image h-[3.21285rem] w-10"
-                />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img
-                  src="./assets/image/goods2.svg"
-                  alt="온더바디 죠르디 시카 자석 선쿠션"
-                  class="li_image h-[3.21285rem] w-10"
-                />
-              </a>
-            </li>
-          </ul>
-          <button
-            type="button"
-            class="button__bottom mt-2 h-[1.125rem] w-[1.125rem] border-[none] bg-transparent p-0"
-          >
-            <img
-              src="./assets/icons/Direction=Down.svg"
-              alt="아래쪽 이동 화살표"
-            />
-          </button>
+          </h3>
+
+          <div class="swiper3 list-none overflow-hidden relative py-2">
+            <div class="swiper-wrapper side__ul"></div>
+            <div class="swiper-button-prev">
+              <img
+                src="./assets/icons/Direction=Up.svg"
+                alt="위쪽 이동 화살표"
+              />
+            </div>
+            <div class="swiper-button-next">
+              <img
+                src="./assets/icons/Direction=Down.svg"
+                alt="아래쪽 이동 화살표"
+              />
+            </div>
+          </div>
         </div>
       </aside>
     </main>
@@ -1209,59 +1261,5 @@
         </form>
       </dialog>
     </div>
-    <!-- 모달 add__cart-->
-    <!-- <div class="modal__background">
-      <div class="modal__window">
-        <dialog class="modal__cart" aria-labelledby="cartGoods" open>
-          <h2 class="sr-only" id="cartGoods">장바구니</h2>
-
-          <div class="modal__cart__goodsGroup">
-            <dl class="cart__goods">
-              <dt class="sr-only">상품명</dt>
-              <dd class="cart__goodsName">
-                <span aria-hidden="true">[</span>풀무원<span
-                  aria-hidden="true"
-                  >]</span
-                >
-                탱탱쫄면 (4개입)
-              </dd>
-              <dt class="sr-only">정상가</dt>
-              <dd class="cart__regPrice"><ins>4,980 원</ins></dd>
-            </dl> -->
-
-    <!-- css를 통한 수량과 합계 변화가 어려워 고정형으로 처리 -->
-    <!-- <div class="count__container">
-              <button type="button" class="button__reduce" aria-label="감소">
-                -
-              </button>
-              <span class="count__quantity">1</span>
-              <button type="button" class="button__add" aria-label="증가">
-                +
-              </button>
-            </div>
-          </div>
-
-          <div class="cart__count">
-            <dl class="cart__sum">
-              <dt class="cart__sumName">합계</dt>
-              <dd class="cart__sumPrice">4,980 원</dd>
-            </dl>
-
-            <div class="cart__point">
-              <span class="point__title">적립</span>
-              <span class="point__detail">구매 시 5원 적립</span>
-            </div>
-          </div>
-
-          <form class="close">
-    <!-- method="dialog" -->
-    <!-- <button class="button__cancel" value="cancel">취소</button>
-            <button class="button__addCart" value="default">
-              장바구니 담기
-            </button>
-          </form>
-        </dialog>
-      </div>
-    </div>-->
   </body>
 </html>
