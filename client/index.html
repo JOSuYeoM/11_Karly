@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- 파비콘 마켓컬리 -->
     <link
       rel="icon"
       href="https://res.kurly.com/kurly/logo/icon-192x192.png"
-      type="image/xml+svg" />
+      type="image/xml+svg"
+    />
 
     <link
       rel="stylesheet"
@@ -20,7 +20,8 @@
       rel="stylesheet"
       as="style"
       crossorigin
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard-dynamic-subset.css" />
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard-dynamic-subset.css"
+    />
     <link rel="stylesheet" href="./css/main.css" />
     <link
       rel="stylesheet"
@@ -28,12 +29,10 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/main.js" type="module"></script>
-    <!-- <script src="./js/swiper.js" defer></script> -->
     <title>main page</title>
   </head>
 
   <body class="font-pretendard">
-    <!-- 공통 헤더 -->
     <div class="header__mention">
       <a
         href="#"
@@ -176,7 +175,6 @@
       </div>
     </header>
 
-    <!-- 공통 내비게이션 -->
     <nav class="nav w-full py-4 border-b drop-shadow-md z-40 relative">
       <h2 class="sr-only">주요 메뉴</h2>
       <div
@@ -484,7 +482,6 @@
       </div>
     </nav>
 
-    <!-- 메인 이벤트 섹션 -->
     <main>
       <section class="event group relative mx-auto justify-center">
         <h2 class="sr-only">메인 이벤트</h2>
@@ -495,7 +492,7 @@
                 <img
                   src="/assets/image/banner01.svg"
                   alt="컬리 이 주의 특가 한 눈에 보기"
-                  class="event__image h-[23.125rem] w-[120rem]"
+                  class="event__image w-[120rem]"
                 />
               </a>
             </div>
@@ -504,7 +501,7 @@
                 <img
                   src="/assets/image/banner02.svg"
                   alt="컬리 이 주의 특가 한 눈에 보기"
-                  class="event__image h-[23.125rem] w-[120rem]"
+                  class="event__image w-[120rem]"
                 />
               </a>
             </div>
@@ -514,7 +511,7 @@
                   <img
                     src="/assets/image/banner03.svg"
                     alt="컬리 이 주의 특가 한 눈에 보기"
-                    class="event__image h-[23.125rem] w-[120rem]"
+                    class="event__image w-[120rem]"
                   />
                 </div>
               </a>
@@ -525,7 +522,7 @@
                   <img
                     src="/assets/image/banner04.svg"
                     alt="컬리 이 주의 특가 한 눈에 보기"
-                    class="event__image h-[23.125rem] w-[120rem]"
+                    class="event__image w-[120rem]"
                   />
                 </div>
               </a>
@@ -541,7 +538,6 @@
           </div>
         </div>
       </section>
-      <!-- 상품1 섹션 -->
 
       <section>
         <!-- 상품1 제목 -->
@@ -669,17 +665,17 @@
                 <a
                   href="#"
                   class="goods__link"
-                  title="[프로쉬] 베이비 세탁세 상세페이지"
+                  title="[프로쉬] 베이비 세탁세제 상세페이지"
                 >
                   <div>
                     <img
                       src="./assets/image/goods4.svg"
-                      alt="상품 이미지"
+                      alt="[프로쉬] 베이비 세탁세제"
                       aria-hidden="true"
                     />
                   </div>
                   <p class="goods__name text-base font-normal top-4 pt-4 pb-2">
-                    [프로쉬] 베이비 세탁세
+                    [프로쉬] 베이비 세탁세제
                   </p>
                   <p
                     class="goods__discount text-21 font-semibold text-accent-yellow"
@@ -718,7 +714,6 @@
         </div>
       </section>
 
-      <!-- 배너 -->
       <section class="banner mx-auto flex w-xl justify-center">
         <h2 class="sr-only">10월 주간 이벤트</h2>
         <a href="#"
@@ -728,7 +723,7 @@
             class="banner__image max-w-5xl py-10"
         /></a>
       </section>
-      <!-- 상품2 섹션 -->
+
       <section>
         <!-- 상품2 제목 -->
         <h2 class="font-bold text-28 text-center text-content mb-9 pt-10">
@@ -908,61 +903,32 @@
           aria-label="다음 상품 보여주기"
         ></button>
       </section>
-      <!-- 사이드바 -->
-      <aside class="side relative z-50" role="complementary">
-        <h2 class="sr-only">최근 본 상품</h2>
+
+      <aside class="side fixed z-30 top-1/3 right-8 w-24" role="complementary">
         <div
-          class="side__container fixed right-[2.44rem] top-[30%] flex h-[13.9375rem] w-20 flex-col items-center border border-solid border-[#c4c4c4] bg-white p-2"
+          class="side__container w-full flex max-h-[350px] flex-col items-center border border-solid border-[#c4c4c4] bg-white p-2"
         >
-          <button
-            type="button"
-            class="button__top h-[1.125rem] w-[1.125rem] border-[none] bg-transparent p-0"
-          >
-            <img src="./assets/icons/Direction=Up.svg" alt="위쪽 이동 화살표" />
-          </button>
-          <span
+          <h3
             class="sidebar__title m-2 h-[1.125rem] w-[4.5rem] text-center text-xs font-semibold leading-[150%] text-[black]"
           >
             최근 본 상품
-          </span>
-          <ul class="side__ul list-none overflow-hidden">
-            <li>
-              <a href="#">
-                <img
-                  src="./assets/image/goods1.svg"
-                  alt="풀무원 탱탱쫄면(4개입)"
-                  class="li_image h-[3.21285rem] w-10"
-                />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img
-                  src="./assets/image/goods4.svg"
-                  alt="프로쉬 베이비 세탁세제"
-                  class="li_image h-[3.21285rem] w-10"
-                />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img
-                  src="./assets/image/goods2.svg"
-                  alt="온더바디 죠르디 시카 자석 선쿠션"
-                  class="li_image h-[3.21285rem] w-10"
-                />
-              </a>
-            </li>
-          </ul>
-          <button
-            type="button"
-            class="button__bottom mt-2 h-[1.125rem] w-[1.125rem] border-[none] bg-transparent p-0"
-          >
-            <img
-              src="./assets/icons/Direction=Down.svg"
-              alt="아래쪽 이동 화살표"
-            />
-          </button>
+          </h3>
+
+          <div class="swiper3 list-none overflow-hidden relative py-2">
+            <div class="swiper-wrapper side__ul"></div>
+            <div class="swiper-button-prev">
+              <img
+                src="./assets/icons/Direction=Up.svg"
+                alt="위쪽 이동 화살표"
+              />
+            </div>
+            <div class="swiper-button-next">
+              <img
+                src="./assets/icons/Direction=Down.svg"
+                alt="아래쪽 이동 화살표"
+              />
+            </div>
+          </div>
         </div>
       </aside>
     </main>
@@ -1257,7 +1223,6 @@
       </div>
     </footer>
 
-    <!-- 메인 팝업 -->
     <div class="popup absolute left-[40%] top-[30%]">
       <dialog
         class="popup__container fixed left-[40%] top-[30%] z-[5] h-[470.4px] w-[308px] overflow-hidden rounded-2xl bg-white shadow-[0_8px_36px_0_rgba(0,0,0,0.2)]"
@@ -1289,82 +1254,5 @@
         </form>
       </dialog>
     </div>
-    <!-- 모달 add__cart-->
-    <!-- <div class="modal__background">
-      <div class="modal__window">
-        <dialog class="modal__cart" aria-labelledby="cartGoods" open>
-          <h2 class="sr-only" id="cartGoods">장바구니</h2>
-
-          <div class="modal__cart__goodsGroup">
-            <dl class="cart__goods">
-              <dt class="sr-only">상품명</dt>
-              <dd class="cart__goodsName">
-                <span aria-hidden="true">[</span>풀무원<span
-                  aria-hidden="true"
-                  >]</span
-                >
-                탱탱쫄면 (4개입)
-              </dd>
-              <dt class="sr-only">정상가</dt>
-              <dd class="cart__regPrice"><ins>4,980 원</ins></dd>
-            </dl> -->
-
-    <!-- css를 통한 수량과 합계 변화가 어려워 고정형으로 처리 -->
-    <!-- <div class="count__container">
-              <button type="button" class="button__reduce" aria-label="감소">
-                -
-              </button>
-              <span class="count__quantity">1</span>
-              <button type="button" class="button__add" aria-label="증가">
-                +
-              </button>
-            </div>
-          </div>
-
-          <div class="cart__count">
-            <dl class="cart__sum">
-              <dt class="cart__sumName">합계</dt>
-              <dd class="cart__sumPrice">4,980 원</dd>
-            </dl>
-
-            <div class="cart__point">
-              <span class="point__title">적립</span>
-              <span class="point__detail">구매 시 5원 적립</span>
-            </div>
-          </div>
-
-          <form class="close">
-    <!-- method="dialog" -->
-    <!-- <button class="button__cancel" value="cancel">취소</button>
-            <button class="button__addCart" value="default">
-              장바구니 담기
-            </button>
-          </form>
-        </dialog>
-      </div>
-    </div>-->
-    <!-- <script>
-      const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
-
-        // If we need pagination
-        pagination: {
-          el: '.swiper-pagination',
-        },
-
-        // Navigation arrows
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-
-        // And if we need scrollbar
-        scrollbar: {
-          el: '.swiper-scrollbar',
-        },
-      });
-    </script> -->
   </body>
 </html>

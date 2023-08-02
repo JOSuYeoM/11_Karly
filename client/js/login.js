@@ -25,9 +25,6 @@ const button = getNode('.login__button');
 const loginFail = getNode('.loginFail');
 const modalButton = getNode('.modalButton');
 
-// 에러 메세지 만들기
-// const idError = document.querySelector('#userEmailError')
-// const pwError = document.querySelector('#userPasswordError')
 
 let emailValue = email.value;
 let pwValue = pw.value;
