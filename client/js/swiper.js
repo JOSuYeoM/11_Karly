@@ -25,10 +25,6 @@ export const swiper = new Swiper('.swiper1', {
     nextEl: '.swiper-button-next-main',
     prevEl: '.swiper-button-prev-main',
   },
-
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
 });
 
 export const swiper2 = new Swiper('.swiper2', {
@@ -40,3 +36,17 @@ export const swiper2 = new Swiper('.swiper2', {
       prevEl: '.swiper-button-prev1',
   },
 });
+
+export const swiper3 = new Swiper('.swiper3', {
+  direction: 'vertical',
+  // slidesPerView: '2.5',
+  spaceBetween: '10',
+  loop : false,
+  navigation: {
+      nextEl: '.swiper-button-next2',
+      prevEl: '.swiper-button-prev2',
+  },
+  autoHeight : true,
+  watchOverflow : true
+});
+
