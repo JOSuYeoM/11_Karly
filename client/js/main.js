@@ -1,14 +1,11 @@
 import { swiper } from './swiper.js';
 import { getNode, getNodes, insertFirst } from '../lib/index.js'
 
-
-// DOM 페이지 로드 시 Swiper 및 로컬 스토리지에서 항목 로드를 처리합니다.
 document.addEventListener("DOMContentLoaded", () => {
   loadItemsFromStorage();
   initializeSwiper();
 });
 
-// 로컬 스토리지에서 항목을 불러와 Swiper에 삽입하는 함수
 function loadItemsFromStorage() {
   const items = getSelectedItemsFromLocalStorage();
   items.forEach((item) => {
@@ -16,7 +13,6 @@ function loadItemsFromStorage() {
   });
 }
 
-// Swiper 초기화 함수
 function initializeSwiper() {
   new Swiper(".swiper3", {
     direction: "vertical",
@@ -30,14 +26,13 @@ function initializeSwiper() {
   });
 }
 
-// 로컬 스토리지에서 선택된 항목 가져오기
 function getSelectedItemsFromLocalStorage() {
   return JSON.parse(localStorage.getItem("selectedItems")) || [];
 }
 
 function insertItems(item) {
   const slideContainer = getNode(".side__ul");
-  const slide = getNode("div");
+  const slide = document.createElement("div");
   slide.classList.add("swiper-slide");
   slide.innerHTML = `
     <li class>
@@ -47,7 +42,6 @@ function insertItems(item) {
   insertFirst(slideContainer, slide.outerHTML);
 }
 
-// 중복된 아이템 여부 확인
 function isItemDuplicated(selectedGoods) {
   const selectedItems = getSelectedItemsFromLocalStorage();
 
@@ -59,7 +53,6 @@ function isItemDuplicated(selectedGoods) {
   return false;
 }
 
-// 선택한 상품 저장
 function saveSelectedItem(selectedGoods) {
   const selectedItems = getSelectedItemsFromLocalStorage();
   selectedItems.push(selectedGoods);
