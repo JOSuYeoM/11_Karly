@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인 페이지</title>
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard-dynamic-subset.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/main.js" type="module"></script>
+  </head>
+
+  <body>
+    <section class="cart__wrapper text-center">
+      <h2 class="cart__title font-semibold text-2xl my-11 text-center">
+        장바구니
+      </h2>
+      <div class="product">
+        <!-- 전체선택 & 선택삭제 box -->
+        <div class="select">
+          <label class="selectall">
+            <input type="checkbox" class="selectall__button is--active" />
+            <input type="checkbox" class="selectall__text" />
+            전체선택
+          </label>
+          <span class="select__line">|</span>
+          <button class="select__delete">선택삭제</button>
+        </div>
+
+        <div class="cart">
+          <div class="fridge">
+            <span><img src="./assets/icons/fridge.png" alt="냉장식품" /></span>
+            <h4 class="fridge__title">냉장 식품</h4>
+            <button class="fridge__more">
+              <img src="./assets/icons/arrow_more.png" alt="펼쳐보기" />
+            </button>
+            <ul class="cart__fridge">
+              <li class="fridge__item"></li>
+            </ul>
+          </div>
+          <div class="frozen">
+            <span><img src="./assets/icons/frozen.png" alt="냉동식품" /></span>
+            <h4 class="fridge__title inline-block">냉동 식품</h4>
+            <button class="frozen__more">
+              <img src="./assets/icons/arrow_more.png" alt="펼쳐보기" />
+            </button>
+            <ul class="cart__frozen">
+              <li class="frozen__item"></li>
+            </ul>
+          </div>
+          <div class="room">
+            <span><img src="./assets/icons/room.png" alt="상온식품" /></span>
+            <h4 class="fridge__title">상온 식품</h4>
+            <button class="room__more">
+              <img src="./assets/icons/arrow_more.png" alt="펼쳐보기" />
+            </button>
+            <ul class="cart__room">
+              <li class="room__item"></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 전체선택 & 선택삭제 box -->
+        <div class="select">
+          <label class="selectall">
+            <input type="checkbox" class="selectall__button is--active" />
+            <input type="checkbox" class="selectall__text" />
+            전체선택
+          </label>
+          <span class="select__line">|</span>
+          <button class="select__delete">선택삭제</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
