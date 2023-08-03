@@ -43,13 +43,13 @@
 ![main_KBS](https://github.com/1plus1equal11/11_Karly/assets/86372549/74be700e-d3d8-4ddb-83b5-d37eba7d5f8d)
 ![main_KBS1](https://github.com/1plus1equal11/11_Karly/assets/86372549/ab51404b-087c-4c35-bbb4-1f8ceeb7eead)
 - 마크업 구조 (event banner)
-   - event banner img에 relative 속성 부여 후 button에 block 속성을 부여하여 img 위에 배치
+   - event banner img에 `relative` 속성 부여 후 button에 `block` 속성을 부여하여 img 위에 배치
 - 마크업 및 기능 구현 (sidebar)
    - ul태그를 사용해서 자식요소인 li태그에 img를 넣어서 사용
    - sidebar 최근 본 상품에 상품을 클릭 시 localStorage 중복되지 않게 추가,
     새로고침 시 사라지지 않도록 구현
 - pop-up
-   - dialog 태그를 사용하고 autofocus 속성을 부여해서 페이지에서 가장 먼저 focus를 받도록 구현
+   - dialog 태그를 사용하고 `autofocus` 속성을 부여해서 페이지에서 가장 먼저 focus를 받도록 구현
 
 
  ## 👩🏻‍💻 양시연
